@@ -1,4 +1,4 @@
-<table >
+<table>
     <tr *ngFor="let post of posts">
         <td>會議名稱</td>
         <td>{{post.Mname}}</td>
@@ -24,6 +24,18 @@
         <td>{{post.description}}</td>
     </tr>
 </table>
-<ol type="1" >
-    <li *ngFor="let list of lists">{{list.name}}</li>
-</ol>  
+<br>
+<hr>
+<br>
+
+<table style="width:30% ;">
+    <tr style="background-color:#beaaaa;">
+        <th>序號</th>
+        <th>姓名</th>
+    </tr>
+     <tr style="background-color:#ffffff;" *ngFor="let list of lists">
+        <td style="width: 5px;">{{list.id}}</td>
+        <td >{{list.name}}</td>
+     </tr>
+</table >
+
