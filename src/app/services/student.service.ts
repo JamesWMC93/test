@@ -6,10 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StudentService {
 
-  private url ='https://raw.githubusercontent.com/tankhaihong/test/main/project.json'
+  private url ='https://raw.githubusercontent.com/tankhaihong/test/main/project.json';
+  private urllist ='https://raw.githubusercontent.com/tankhaihong/test/main/list.json';
 
   constructor(private httpClient: HttpClient) {}
-  getPosts(){
+  getSignin(){
     return this.httpClient.get(this.url);
+  }
+
+  getNamelist(){
+    return this.httpClient.get(this.urllist);
   }
 }
