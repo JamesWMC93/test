@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* You can add global styles to this file, and also import other style files */
     .grid-container {
 =======
 /* You can add global styles to this file, and also import other style files */
 .grid-container {
 >>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43
+=======
+    /* You can add global styles to this file, and also import other style files */
+    .grid-container {
+>>>>>>> 6ed086b3304d9718890910377cc387d0e502fa82
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -18,12 +24,20 @@
 
   .grid-item {
 >>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43
+=======
+    }
+
+    .grid-item {
+>>>>>>> 6ed086b3304d9718890910377cc387d0e502fa82
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ed086b3304d9718890910377cc387d0e502fa82
     }
 
 
@@ -68,6 +82,7 @@
     position:absolute;
     left: 50%;
     }
+<<<<<<< HEAD
 
     button {
         border-radius: 5px;
@@ -117,3 +132,5 @@ input[type=submit] {
   left: 50%;
 }
 >>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43
+=======
+>>>>>>> 6ed086b3304d9718890910377cc387d0e502fa82

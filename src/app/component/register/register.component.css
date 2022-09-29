@@ -7,7 +7,7 @@
     border: 10px;
 }
 
-body{
+:host{
     background-color:yellowgreen;
     display: block;
 }
