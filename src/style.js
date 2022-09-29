@@ -6,3 +6,7 @@ $(function () {
     // function for form2
   });
 });
+
+function closeWin() {
+  myWindow.close();
+}
