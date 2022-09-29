@@ -11,7 +11,7 @@ import { StuOptionComponent } from './component/stu-option/stu-option.component'
 
 
 const appRoute:Routes=[
-  {path:"",component:LoginComponent},
+  {path:"",component:SigninComponent},
   {path:'簽到',component: SigninComponent},
   {path:'Login',component: LoginComponent},
 
