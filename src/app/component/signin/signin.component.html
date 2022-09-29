@@ -1,0 +1,41 @@
+<table>
+    <tr *ngFor="let post of posts">
+        <td>會議名稱</td>
+        <td>{{post.Mname}}</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>會議地點</td>
+        <td>{{post.place}}</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>主辦單位</td>
+        <td>{{post.ori}}</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>會議日期</td>
+        <td>{{post.date}}</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>聯絡人</td>
+        <td>{{post.Cperson}}</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>會議簡述</td>
+        <td>{{post.description}}</td>
+    </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<table style="width:30% ;">
+    <tr style="background-color:#beaaaa;">
+        <th>序號</th>
+        <th>姓名</th>
+    </tr>
+     <tr style="background-color:#ffffff;" *ngFor="let list of lists">
+        <td style="width: 5px;">{{list.id}}</td>
+        <td >{{list.name}}</td>
+     </tr>
+</table >
+

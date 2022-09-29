@@ -1,17 +1,29 @@
+<<<<<<< HEAD
     /* You can add global styles to this file, and also import other style files */
     .grid-container {
+=======
+/* You can add global styles to this file, and also import other style files */
+.grid-container {
+>>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
+<<<<<<< HEAD
     }
 
     .grid-item {
+=======
+  }
+
+  .grid-item {
+>>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+<<<<<<< HEAD
     }
 
 
@@ -61,3 +73,47 @@
         border-radius: 5px;
         font-size: 20px;
     }
+=======
+  }
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    bottom: 300px;
+    overflow-x: hidden;
+    padding-top: 10px;
+    border: 10px;
+  }
+  /* Control the left side */
+.left {
+  left: 0;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: 10px;
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  font-size: 20px;
+}
+.vertical {
+  border-left: 2px solid black;
+  height: 900px;
+  position:absolute;
+  left: 50%;
+}
+>>>>>>> a1fb5aa2bd3981a7f0e10b2a8f965661fce98a43

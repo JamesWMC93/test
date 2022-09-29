@@ -1,0 +1,22 @@
+table {
+    font-family: arial, sans-serif;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  td, th {
+    border: 1px solid #5a5959c7;
+    
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #c2ecb5cc;
+  }
+
+  :host{
+    background-color: rgba(5, 168, 5, 0.507);
+    size:0vmax;
+    display: block;
+  }
