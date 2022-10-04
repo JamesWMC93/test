@@ -1,7 +1,11 @@
 button {
-    border-radius: 5px;
-    font-size: 20px;
-}
+    border-radius: 12px;
+    font-size: 25px;
+    background-color:lightslategray;color: white;
+    padding: 15px;
+    border: 1px;
+    cursor: pointer;
+  }
 
 
 .dropbtn {
