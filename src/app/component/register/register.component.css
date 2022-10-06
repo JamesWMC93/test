@@ -8,24 +8,11 @@
 }
 
 :host{
-    background-color:yellowgreen;
     display:block;
-    margin-top: 5%;
-}
-table{
-    border:1px solid black;
-    width: 100%;
-}
-th{
-    border:1px solid black;
-    width: 10%;    
+    text-align: center;
 }
 
-tr{
-    border:1px solid black;    
+.container{
+    background-color: lightskyblue ;
 }
 
-td{
-    border:1px solid black;
-    text-align: center;    
-}
