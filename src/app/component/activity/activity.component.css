@@ -1,0 +1,11 @@
+.card-header{
+    text-align: center;
+    background-color: aquamarine;
+    padding: 16px;
+    
+}
+
+.btn{
+    outline-color: black;
+    border-right: 60%;
+}

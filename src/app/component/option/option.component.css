@@ -1,13 +1,11 @@
 button {
-    background-color:lightslategray;
-    color: white;
-    padding: 15px;
+    border-radius: 12px;
     font-size: 25px;
+    background-color:lightslategray;color: white;
+    padding: 15px;
     border: 1px;
     cursor: pointer;
-    border-radius: 12px;
-    border:1px;
-}
+  }
 
 
 .dropbtn {
