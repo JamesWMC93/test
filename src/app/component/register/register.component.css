@@ -1,0 +1,31 @@
+.centered{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 10px;
+}
+
+:host{
+    background-color:yellowgreen;
+    display:block;
+    margin-top: 5%;
+}
+table{
+    border:1px solid black;
+    width: 100%;
+}
+th{
+    border:1px solid black;
+    width: 10%;    
+}
+
+tr{
+    border:1px solid black;    
+}
+
+td{
+    border:1px solid black;
+    text-align: center;    
+}

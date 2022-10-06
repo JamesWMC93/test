@@ -1,5 +1,9 @@
 {
     "marquee.widgets.npm-stats.packageNames": [
         "test"
+    ],
+    "cSpell.words": [
+        "dropbtn",
+        "signin"
     ]
 }
