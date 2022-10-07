@@ -10,6 +10,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { CheckComponent } from './component/check/check.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ResgiterActivityComponent } from './component/resgiter-activity/resgiter-activity.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [{path:"",component:SigninComponent},
 {path:'Activity',component: ActivityComponent},
 {path:'會議室申請',component: RegisterComponent},
 {path:'會議室查詢',component: CheckComponent},
+{path:'ResgiterA',component: ResgiterActivityComponent},
 
 
 
