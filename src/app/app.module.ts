@@ -37,7 +37,7 @@ import { CheckComponent } from './component/check/check.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

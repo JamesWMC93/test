@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from 'src/app/services/student.service';
 
 @Component({
   selector: 'app-activity',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityComponent implements OnInit {
 
-  constructor() { }
+  activities:any=[];
+
+  constructor(private activityURL:StudentService) { }
 
   ngOnInit(): void {
+    this.activityURL.getActivity()
+    .subscribe((response:any) => {
+      this.activities = response;
+    });
   }
 
 }

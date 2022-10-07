@@ -8,7 +8,7 @@ import{FormBuilder , FormControl}from '@angular/forms';
 })
 export class ResgiterActivityComponent implements OnInit {
   resgiterActivity:any;
-  constructor() { }
+  constructor(private fb:FormBuilder ) { }
 
   ngOnInit(): void {
   }
