@@ -1,60 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Test</title>
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="/src/app/component/register/register.component.css">
-    <script src="style.js"></script>
-</head>
-<body>
-    <div class="centered">
-        <h1>會議室使用申請</h1>
+<div class="card-header">
+    借用場地申請作業
+  </div>
+<div class="container">
+<form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
+    <div class="form-group">
+        <label for="unit">單位:</label>
+        <input type="text" class="form-control" id="unit" formControlName="unit">
+        <div class="text-danger" *ngIf="form.controls.unit.errors && form.controls.unit.touched &&form.controls.unit.invalid">
+            <div *ngIf="form.controls.unit.errors.required">必填</div>
+            <div *ngIf="form.controls.unit.errors.minlength">最少5字</div>
+        </div>
+        </div>
+    
+        
+        <div class="form-group">
+            <label for="name">借用人姓名 :</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+            <div class="text-danger" *ngIf="form.controls.personal.controls.name.errors && form.controls.personal.controls.name.touched &&form.controls.personal.controls.name.invalid">
+                <div *ngIf="form.controls.personal.controls.name.errors.required">必填</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="place">申請地點：</label>
+            <input type="text" class="form-control" id="place" formControlName="place">
+            
+            <div class="text-danger" *ngIf="form.controls.place.errors && form.controls.place.touched &&form.controls.place.invalid">
+                <div *ngIf="form.controls.place.errors.required">必填</div>
+                <div *ngIf="form.controls.place.errors.minlength">最少8字</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">使用説明：</label>
+            <input type="text" class="form-control" id="reason" formControlName="reason">
+            <div class="text-danger" *ngIf="form.controls.reason.errors && form.controls.reason.touched &&form.controls.reason.invalid">
+                <div *ngIf="form.controls.reason.errors.required">必填</div>
+                <div *ngIf="form.controls.reason.errors.minlength">最少8字</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date">日期</label>
+            <input type="date"  id="date" formControlName="date">
+            <div class="text-danger" *ngIf="form.controls.personal.controls.date.errors && form.controls.personal.controls.date.touched &&form.controls.personal.controls.date.invalid">
+                <div *ngIf="form.controls.personal.controls.date.errors.required">必填</div>
+            </div>
+        
     </div>
     
-    <div class="row" style="top:100%">
-        <table>
-            <th>序號</th>
-            <th>證號</th>
-            <th>姓名</th>
-            <th>會議室</th>
-            <th>借用時間</th>
-            <th>空</th>
-            <th>空</th>
-            <th>空</th>
-            <tr>
-                <td>1</td>
-                <td>1011</td>
-                <td>xxx</td>
-                <td>1</td>
-                <td>0800</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>1012</td>
-                <td>xxx</td>
-                <td>2</td>
-                <td>1000</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>1013</td>
-                <td>xxx</td>
-                <td>2</td>
-                <td>1330</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </div>
-</body>
-</html>
+    
+    <button type="submit">送出</button>
+
+
+
+</form>
+</div>
