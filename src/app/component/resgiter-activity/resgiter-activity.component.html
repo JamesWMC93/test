@@ -131,7 +131,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
 
     
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="name">name</label>
             <input type="text" class="form-control" id="name" formControlName="name">
             <div class="text-danger" *ngIf="form.controls.personal.controls.name.errors && form.controls.personal.controls.name.touched &&form.controls.personal.controls.name.invalid">
@@ -142,15 +142,15 @@
             <label for="gender">gender  </label>
             <input type="radio"  value="1" id="gender" formControlName="gender">男
             <input type="radio"  value="2" id="gender" formControlName="gender">女
-        </div>
+        </div> -->
         <div class="form-group">
-            <label for="age">age   </label>
-            <input type="date"  id="age" formControlName="age">
+            <label for="age">聯絡號碼 :   </label>
+            <input type="text"  id="age" formControlName="age">
         </div>
     
 
-    <button type="submit">送出</button>
-
+    <button type="submit" class="container">送出</button>
+    <br><br><br>
 
 
 </form>
