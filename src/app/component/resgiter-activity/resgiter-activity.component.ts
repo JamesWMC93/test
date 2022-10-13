@@ -10,7 +10,7 @@ import { StudentService } from 'src/app/services/student.service';
   styleUrls: ['./resgiter-activity.component.css']
 })
 export class ResgiterActivityComponent implements OnInit {
-  form:any;
+  public form:any;
   posts: any = [];
   constructor(private fb: FormBuilder, private productURL: StudentService) { 
     this.form=this.fb.group({ 
