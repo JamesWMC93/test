@@ -5,6 +5,12 @@
     color: rgb(255, 251, 251);
 }
 
-/* .form{
-    background-color:rgb(173, 173, 173); ;
-} */
+:host{
+    display:block;
+    text-align: center;
+}
+
+.container{
+    background-color: lightskyblue ;
+}
+

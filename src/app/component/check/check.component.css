@@ -11,8 +11,8 @@ table{
 
 }
 th{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     width: 10%;
 }
 td{
@@ -23,6 +23,12 @@ td{
 .container{
     text-align: center;
 }
-/* tr{
 
-} */
+tr{
+    background-color:lightblue
+
+}
+
+tr:nth-child(even) {
+    background-color: #c2ecb5cc;
+  }

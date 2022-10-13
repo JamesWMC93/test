@@ -1,61 +1,86 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Test</title>
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="/src/app/component/register/register.component.css">
-    <script src="style.js"></script>
-</head>
-<body>
+<body style="background-color:yellowgreen">
     <div class="container">
-        <h1>會議室使用申請</h1>
+        <h1>會議室使用申請查詢</h1>
     </div>
-    <div class="container">
-    <div class="row">
-        <table>
-            <th>序號</th>
-            <th>證號</th>
-            <th>姓名</th>
-            <th>會議室</th>
-            <th>借用時間</th>
-            <th>空</th>
-            <th>空</th>
-            <th>空</th>
-            <tr>
-                <td>1</td>
-                <td>1011</td>
-                <td>xxx</td>
-                <td>1</td>
-                <td>0800</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>1012</td>
-                <td>xxx</td>
-                <td>2</td>
-                <td>1000</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>1013</td>
-                <td>xxx</td>
-                <td>2</td>
-                <td>1330</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-        </table>
+    <!-- <div class="container">
+        <div class="row">
+            <table>
+                <th>序號</th>
+                <th>證號</th>
+                <th>姓名</th>
+                <th>會議室</th>
+                <th>借用時間</th>
+                <th>空</th>
+                <th>空</th>
+                <th>空</th>
+                <tr>
+                    <td>1</td>
+                    <td>1011</td>
+                    <td>xxx</td>
+                    <td>1</td>
+                    <td>0800</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1012</td>
+                    <td>xxx</td>
+                    <td>2</td>
+                    <td>1000</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1013</td>
+                    <td>xxx</td>
+                    <td>2</td>
+                    <td>1330</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>1013</td>
+                    <td>xxx</td>
+                    <td>2</td>
+                    <td>1330</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        
+        <div class="container">
+            <button type="button" onclick="closeWin()">關閉</button>
+        </div>
+
+        <div class="container">
+            <button type="button" onclick="closeWin()">關閉</button>
+        </div>
+    </div> -->
+
+    <div class="container" style="background-color:antiquewhite">
+        <label for="date">日期：</label>
+        <input type="date" name="start_date" placeholder="">&nbsp;
+        ~   
+        <input type="date" name="end_date">&nbsp;&nbsp;
+        
+        <label for="place">場地：</label>
+        <select name="froom" id="froom">
+            <option value="1">會議室一</option>
+            <option value="2">會議室二</option>
+        </select>
+        <br>
+        <button type="button" style="margin-top:20px">查詢</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" style="margin-top:20px">返回</button>&nbsp;&nbsp;&nbsp;
     </div>
-</div>
 </body>
-</html>

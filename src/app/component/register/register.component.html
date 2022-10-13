@@ -1,56 +1,34 @@
-<div class="card-header">
-    借用場地申請作業
-  </div>
-<div class="container">
-<form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm" class="form">
-    <div class="form-group">
-        <label for="unit">單位:</label>
-        <input type="text" class="form-control" id="unit" formControlName="unit">
-        <div class="text-danger" *ngIf="form.controls.unit.errors && form.controls.unit.touched &&form.controls.unit.invalid">
-            <div *ngIf="form.controls.unit.errors.required">必填</div>
-            <div *ngIf="form.controls.unit.errors.minlength">最少5字</div>
-        </div>
-        </div>
-    
-        
-        <div class="form-group">
-            <label for="name">借用人姓名 :</label>
-            <input type="text" class="form-control" id="name" formControlName="name">
-            <div class="text-danger" *ngIf="form.controls.personal.controls.name.errors && form.controls.personal.controls.name.touched &&form.controls.personal.controls.name.invalid">
-                <div *ngIf="form.controls.personal.controls.name.errors.required">必填</div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="place">申請地點：</label>
-            <input type="text" class="form-control" id="place" formControlName="place">
-            
-            <div class="text-danger" *ngIf="form.controls.place.errors && form.controls.place.touched &&form.controls.place.invalid">
-                <div *ngIf="form.controls.place.errors.required">必填</div>
-                <div *ngIf="form.controls.place.errors.minlength">最少8字</div>
-            </div>
-        </div>
+<h1>會議室使用申請表</h1>
+<p style="color:red">請務必填寫正確資料!!!</p>
+<form action="action_page.php">
+    <div class="container">
+    <hr>
+    <label for="fid"><b>證號：</b></label>
+    <input type="text" placeholder="" name="fid" id="fid" required>&nbsp;
 
-        <div class="form-group">
-            <label for="reason">使用説明：</label>
-            <input type="text" class="form-control" id="reason" formControlName="reason">
-            <div class="text-danger" *ngIf="form.controls.reason.errors && form.controls.reason.touched &&form.controls.reason.invalid">
-                <div *ngIf="form.controls.reason.errors.required">必填</div>
-                <div *ngIf="form.controls.reason.errors.minlength">最少8字</div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="date">日期</label>
-            <input type="date"  id="date" formControlName="date">
-            <div class="text-danger" *ngIf="form.controls.personal.controls.date.errors && form.controls.personal.controls.date.touched &&form.controls.personal.controls.date.invalid">
-                <div *ngIf="form.controls.personal.controls.date.errors.required">必填</div>
-            </div>
-        
+    <label for="fname"><b>姓名：</b></label>
+    <input type="text" placeholder="" name="fname" id="fname" required>&nbsp;
+    
+    <label for="froom"><b>會議室：</b></label>
+    <input type="text" placeholder="" name="froom" id="froom" required>&nbsp;
+
+    <br>
+
+    <label for="fdate"><b>借用日期：</b></label>
+    <input type="date" placeholder="" name="fdate" id="fdate" required>&nbsp;
+
+    <label for="ftime"><b>借用時間：</b></label>
+    <input type="time" placeholder="" name="ftime" id="ftime" required>&nbsp;
+    <hr>
     </div>
-    
-    
-    <button type="submit">送出</button>
+
+    <button type="submit" class="registerbtn">申請</button> &nbsp;
+    <button type="button" class="checkbtn">查詢</button><br>
+    <button onclick="closeWin()" style="margin-top:0.40%">關閉</button>
 
 
-
+    <!-- 
+    <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div> -->
 </form>
-</div>
