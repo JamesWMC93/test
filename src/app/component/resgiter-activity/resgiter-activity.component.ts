@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{FormBuilder , FormControl}from '@angular/forms';
 import { Validators } from '@angular/forms';//驗證效果
+import { StudentService } from 'src/app/services/student.service';
+
 
 @Component({
   selector: 'app-resgiter-activity',
@@ -9,11 +11,12 @@ import { Validators } from '@angular/forms';//驗證效果
 })
 export class ResgiterActivityComponent implements OnInit {
   form:any;
-  constructor(private fb:FormBuilder) { 
+  posts: any = [];
+  constructor(private fb: FormBuilder, private productURL: StudentService) { 
     this.form=this.fb.group({ 
-        name:["",[Validators.required]],
-        age:"",
-        gender:"2"
+      contactnum:"",
+      name:"",
+
     });
 
   }
@@ -33,6 +36,10 @@ export class ResgiterActivityComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.productURL.getSignin()
+      .subscribe((response: any) => {
+        this.posts = response;
+      });
   }
 
 }
