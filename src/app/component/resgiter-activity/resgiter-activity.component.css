@@ -1,0 +1,13 @@
+.row , .container{
+    width: 100%;
+}
+
+.title{
+    background-color: bisque;
+}
+
+:host{
+    background-color: rgba(250, 244, 156, 0.603);
+    display: block;
+    
+}

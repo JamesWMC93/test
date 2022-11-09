@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  signin:"https://raw.githubusercontent.com/tankhaihong/test/main/project.json"
+  signin:"https://raw.githubusercontent.com/tankhaihong/test/main/project.json",
+  activity:"http://localhost:4200/Activity"
 };
 
 /*

@@ -1,4 +1,5 @@
-<table>
+<table class="container">
+    
     <tr *ngFor="let post of posts">
         <td>會議名稱</td>
         <td>{{post.Mname}}</td>
@@ -23,19 +24,25 @@
         <td>會議簡述</td>
         <td>{{post.description}}</td>
     </tr>
+    <tr *ngFor="let post of posts">
+        <td>會議簡述</td>
+        <td>{{post.description1}}</td>
+    </tr>
+
 </table>
 <br>
 <hr>
 <br>
-
-<table style="width:30% ;">
-    <tr style="background-color:#beaaaa;">
-        <th>序號</th>
-        <th>姓名</th>
-    </tr>
-     <tr style="background-color:#ffffff;" *ngFor="let list of lists">
-        <td style="width: 5px;">{{list.id}}</td>
-        <td >{{list.name}}</td>
-     </tr>
-</table >
-
+<div class="container">
+    <table style="width:30% ;">
+        <tr style="background-color:#beaaaa;">
+            <th>序號</th>
+            <th>姓名</th>
+        </tr>
+        <tr style="background-color:#ffffff;" *ngFor="let list of lists">
+            <td style="width: 5px;">{{list.id}}</td>
+            <td >{{list.name}}</td>
+        </tr>
+    </table >
+    <br><br><br>  
+</div>

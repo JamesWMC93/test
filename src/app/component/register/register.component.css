@@ -1,10 +1,8 @@
-.centered{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.card-header{
     text-align: center;
-    border: 10px;
+    background-color: rgb(71, 71, 71);
+    padding: 10px;
+    color: rgb(255, 251, 251);
 }
 
 :host{
