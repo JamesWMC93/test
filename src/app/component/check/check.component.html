@@ -12,93 +12,32 @@
 <body>
     <div class="container">
         <h1>會議室使用申請查詢</h1>
-    </div>
-    <!-- <div class="container">
-        <div class="row">
-            <table>
-                <th>序號</th>
-                <th>證號</th>
-                <th>姓名</th>
-                <th>會議室</th>
-                <th>借用時間</th>
-                <th>空</th>
-                <th>空</th>
-                <th>空</th>
-                <tr>
-                    <td>1</td>
-                    <td>1011</td>
-                    <td>xxx</td>
-                    <td>1</td>
-                    <td>0800</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>1012</td>
-                    <td>xxx</td>
-                    <td>2</td>
-                    <td>1000</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>1013</td>
-                    <td>xxx</td>
-                    <td>2</td>
-                    <td>1330</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
+    </div><br>
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="date">日期：</label>
+            <input type="date" name="start_date" placeholder="">&nbsp;
+            ~   
+            <input type="date" name="end_date">&nbsp;&nbsp;  
+        </div>&nbsp;
 
-                <tr>
-                    <td>1</td>
-                    <td>1013</td>
-                    <td>xxx</td>
-                    <td>2</td>
-                    <td>1330</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-
-            </table>
-        </div>
-        <br>
         
-        <div class="container">
-            <button type="button" onclick="closeWin()">關閉</button>
+        <div class="form-group" >
+            <label for="place">場地：</label>
+            <select name="froom" id="froom">
+                <option value="1">會議室一</option>
+                <option value="2">會議室二</option>
+            </select>
+        </div>&nbsp;
+        <div class="checkbtn">
+            <a class="btn btn-outline-dark" href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E7%94%B3%E8%AB%8B" style="left:200px;">申請</a>&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-outline-dark">查詢</button>&nbsp;&nbsp;&nbsp;     
+            <a class="btn btn-outline-dark" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
         </div>
+    </form>
 
-        <div class="container">
-            <button type="button" onclick="closeWin()">關閉</button>
-        </div>
-    </div> -->
 
-    <div class="container">
-        <label for="date">日期：</label>
-        <input type="date" name="start_date" placeholder="">&nbsp;
-        ~   
-        <input type="date" name="end_date">&nbsp;&nbsp;
-        
-        <label for="place">場地：</label>
-        <select name="froom" id="froom">
-            <option value="1">會議室一</option>
-            <option value="2">會議室二</option>
-        </select>
-        <br>
-        <input type="button" name="SubmitX" href='/src/app/component/register/register.component.html' value="查詢">
-        &nbsp;&nbsp;&nbsp;
-        <input name="submit" type="submit" value="登入" style="margin-top: 20px;" href="https://google.com">
-        &nbsp;&nbsp;&nbsp;
-        <button type="button" style="margin-top:20px" onclick="window.open('http://www.google.com')">查詢</button>
-        &nbsp;&nbsp;&nbsp;
-        <input type="button" value="結束作業" onclick="window.close();">
-    </div>
 
     <div class="container">
         <table style="width:100%">
@@ -141,6 +80,71 @@
             <td>1530</td>
             <td><input type="button" value="刪除" onclick="self.close()"></td>
             </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>會議室二</td>
+                <td>2022/08/15</td>
+                <td>1530</td>
+                <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
         </table>
         
     </div>
