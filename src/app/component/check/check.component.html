@@ -1,4 +1,15 @@
-<body style="background-color:yellowgreen">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Site</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="check.component.css">
+</head>
+<body>
     <div class="container">
         <h1>會議室使用申請查詢</h1>
     </div>
@@ -68,7 +79,7 @@
         </div>
     </div> -->
 
-    <div class="container" style="background-color:antiquewhite">
+    <div class="container">
         <label for="date">日期：</label>
         <input type="date" name="start_date" placeholder="">&nbsp;
         ~   
@@ -80,7 +91,59 @@
             <option value="2">會議室二</option>
         </select>
         <br>
-        <button type="button" style="margin-top:20px">查詢</button>&nbsp;&nbsp;&nbsp;
-        <button type="button" style="margin-top:20px">返回</button>&nbsp;&nbsp;&nbsp;
+        <input type="button" name="SubmitX" href='/src/app/component/register/register.component.html' value="查詢">
+        &nbsp;&nbsp;&nbsp;
+        <input name="submit" type="submit" value="登入" style="margin-top: 20px;" href="https://google.com">
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" style="margin-top:20px" onclick="window.open('http://www.google.com')">查詢</button>
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" value="結束作業" onclick="window.close();">
+    </div>
+
+    <div class="container">
+        <table style="width:100%">
+            <tr>
+            <th>序號</th>
+            <th>場地</th>
+            <th>借用日期</th>
+            <th>借用時間</th>
+            <th>刪除</th>
+
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>會議室一</td>
+            <td>2022/05/01</td>
+            <td>0800</td>
+            <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+            <td>2</td>
+            <td>會議室二</td>
+            <td>2022/08/15</td>
+            <td>1000</td>
+            <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+
+            <tr>
+            <td>3</td>
+            <td>會議室一</td>
+            <td>2022/08/15</td>
+            <td>1330</td>
+            <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+            
+            <tr>
+            <td>4</td>
+            <td>會議室二</td>
+            <td>2022/08/15</td>
+            <td>1530</td>
+            <td><input type="button" value="刪除" onclick="self.close()"></td>
+            </tr>
+        </table>
+        
     </div>
 </body>
+
+</html>

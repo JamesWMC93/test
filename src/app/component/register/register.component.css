@@ -11,6 +11,10 @@
 }
 
 .container{
-    background-color: lightskyblue ;
+    background-color: lightblue ;
+    color: white;
 }
 
+body{
+    background-color: lightskyblue;
+}

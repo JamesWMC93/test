@@ -8,6 +8,7 @@
 table{
     border: 1px solid black;
     background-color:antiquewhite;
+    margin-top: 20px;
 
 }
 th{
@@ -32,3 +33,9 @@ tr{
 tr:nth-child(even) {
     background-color: #c2ecb5cc;
   }
+
+body{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 100%;
+}
