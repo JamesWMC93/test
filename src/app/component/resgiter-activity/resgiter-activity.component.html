@@ -136,7 +136,15 @@
         </div>
         
         <div class="form-group" >
-            <input *ngFor="let post of posts" type="hidden" id="name" formControlName="name" value="{{post.name}}">
+            <table *ngFor="let aa of posts">
+                <td>
+
+                    <tr>
+                        學號：<input type="text" id="id" formControlName="id" value="{{aa.name[1]}}" readonly="true">
+                    </tr>
+                </td>
+            </table>
+            
         </div>
     
 
