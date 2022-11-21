@@ -14,7 +14,7 @@ import { ResgiterActivityComponent } from './component/resgiter-activity/resgite
 
 
 
-const routes: Routes = [{path:"",component:CheckComponent},
+const routes: Routes = [{path:"",component:LoginComponent},
 {path:'簽到',component: SigninComponent},
 {path:'Login',component: LoginComponent},
 {path:'Option',component: OptionComponent},
