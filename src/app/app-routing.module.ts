@@ -11,6 +11,7 @@ import { CheckComponent } from './component/check/check.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ResgiterActivityComponent } from './component/resgiter-activity/resgiter-activity.component';
+import { SelectMeetingComponent } from './component/select-meeting/select-meeting.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [{path:"",component:CheckComponent},
 {path:'會議室申請',component: RegisterComponent},
 {path:'會議室查詢',component: CheckComponent},
 {path:'ResgiterA',component: ResgiterActivityComponent},
+{path:'SelectMeeting', component: SelectMeetingComponent },
 
 
 

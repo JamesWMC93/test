@@ -16,6 +16,7 @@ import { StuOptionComponent } from './component/stu-option/stu-option.component'
 import { CheckComponent } from './component/check/check.component';
 import { ActivityComponent } from './component/activity/activity.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectMeetingComponent } from './component/select-meeting/select-meeting.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StuOptionComponent,
     CheckComponent,
     ResgiterActivityComponent,
-    ActivityComponent
+    ActivityComponent,
+    SelectMeetingComponent
   ],
   imports: [
     BrowserModule,
