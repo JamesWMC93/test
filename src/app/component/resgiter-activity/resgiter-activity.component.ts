@@ -16,7 +16,7 @@ export class ResgiterActivityComponent implements OnInit {
     this.form=this.fb.group({ 
       contactnum:"",
       name:"",
-
+      id:""
     });
 
   }
@@ -36,7 +36,7 @@ export class ResgiterActivityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productURL.getSignin()
+    this.productURL.getActivity()
       .subscribe((response: any) => {
         this.posts = response;
       });

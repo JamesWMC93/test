@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
     margin:0px;
     height:100%;
@@ -13,9 +14,17 @@ button {
     border-radius: 12px;
     font-size: 25px;
     background-color:lightslategray;color: white;
+=======
+.btn {
+    background-color:lightslategray;
+    color: white;
+>>>>>>> ca7f6a8c875baf2134b6c6cfb2cb63e6a5eb15e1
     padding: 15px;
+    font-size: 25px;
     border: 1px;
     cursor: pointer;
+    border-radius: 12px;
+    border:1px;
   }
 
 

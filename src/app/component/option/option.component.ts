@@ -9,6 +9,10 @@ export class OptionComponent implements OnInit {
 
   constructor() { }
 
+  clickBtn() {
+    alert("click");
+  }
+
   ngOnInit(): void {
   }
 

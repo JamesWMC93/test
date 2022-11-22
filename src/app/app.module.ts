@@ -15,6 +15,8 @@ import { LoginComponent } from './component/login/login.component';
 import { StuOptionComponent } from './component/stu-option/stu-option.component';
 import { CheckComponent } from './component/check/check.component';
 import { ActivityComponent } from './component/activity/activity.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -35,9 +37,10 @@ import { ActivityComponent } from './component/activity/activity.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  // providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
