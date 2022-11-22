@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
     
   }
 
+
+  
+
   closewin()
   {
   window.open('', '_self', ''); window.close();
