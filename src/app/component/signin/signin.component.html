@@ -58,21 +58,5 @@
 
 </div>
 <br><br><br><br>
-<form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
-
-    <div class="form-group">
-        <label for="Mname">Brand</label>
-        <br />
-        <select formControlName="Mname" id="Mname">
-            <option *ngFor="let name of posts ;let i = index" [ngValue]="name.Mname">{{name.Mname}}
-            </option>
-        </select>
-        <div class="text-danger"
-            *ngIf="form.controls.Mname.errors && form.controls.Mname.touched &&form.controls.Mname.invalid">
-            <div *ngIf="form.controls.Mname.errors.required">必選</div>
-        </div>
-    </div>
-    <button type="submit">送出</button>
-</form>
 
 </html>

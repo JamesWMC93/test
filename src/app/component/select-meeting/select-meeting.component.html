@@ -26,6 +26,19 @@
                 </div>
             </div>
         </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+        
+            <div class="form-group">
+                <label for="Mname">選擇會議</label>
+                <br />
+                <select formControlName="Mname" id="Mname">
+                    <option *ngFor="let name of posts ;let i = index" [ngValue]="name.Mname">{{name.Mname}}
+                    </option>
+                </select>
+            </div>
+            <button type="submit">送出</button>
+        </form>
+        
     </div>
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
