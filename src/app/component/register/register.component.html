@@ -13,38 +13,40 @@
 <body>
 <h1>會議室使用申請表</h1>
 <p style="color:red">請務必填寫正確資料!!!</p>
-<form action="action_page.php">
-    <div class="container">
-    <hr>
-    <label for="fid"><b>證號：</b></label>
-    <input type="text" placeholder="" name="fid" id="fid" required>&nbsp;
-
-    <label for="fname"><b>姓名：</b></label>
-    <input type="text" placeholder="" name="fname" id="fname" required>&nbsp;
+    <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="container">
+        <hr>
+        <label for="fid"><b>證號：</b></label>
+        <input type="text" placeholder="" name="fid" id="fid" required>&nbsp;
     
-    <label for="froom"><b>會議室：</b></label>
-    <input type="text" placeholder="" name="froom" id="froom" required>&nbsp;
-
-    <br>
-
-    <label for="fdate"><b>借用日期：</b></label>
-    <input type="date" placeholder="" name="fdate" id="fdate" required>&nbsp;
-
-    <label for="ftime"><b>借用時間：</b></label>
-    <input type="time" placeholder="" name="ftime" id="ftime" required>&nbsp;
-    <hr>
-    </div>
-
-    <button type="submit" class="registerbtn">申請</button> &nbsp;
-    <button type="button" class="checkbtn">查詢</button><br>
-    <button onclick="closeWin()" style="margin-top:0.40%">關閉</button>
-
+        <label for="fname"><b>姓名：</b></label>
+        <input type="text" placeholder="" name="fname" id="fname" required>&nbsp;
+        
+        <label for="froom"><b>會議室：</b></label>
+        <input type="text" placeholder="" name="froom" id="froom" required>&nbsp;
+    
+        <br>
+        <br>
+    
+        <label for="fdate"><b>借用日期：</b></label>
+        <input type="date" placeholder="" name="fdate" id="fdate" required>&nbsp;
+    
+        <label for="ftime"><b>借用時間：</b></label>
+        <input type="time" placeholder="" name="ftime" id="ftime" required>&nbsp;
+        <hr>
+        </div>
+    
+        <div class="checkbtn">
+          <button type="submit" class="btn btn-outline-dark" >申請</button>&nbsp;&nbsp;&nbsp;
+          <a type="submit" class="btn btn-outline-dark" href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E6%9F%A5%E8%A9%A2" >查詢</a>&nbsp;&nbsp;&nbsp;     
+          <a class="btn btn-outline-dark" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
+      </div>
+  </form>
 
     <!-- 
     <div class="container signin">
     <p>Already have an account? <a href="#">Sign in</a>.</p>
     </div> -->
-</form>
 
 </body>
 </html>

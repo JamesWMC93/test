@@ -15,7 +15,7 @@ import { SelectMeetingComponent } from './component/select-meeting/select-meetin
 
 
 
-const routes: Routes = [{path:"",component:CheckComponent},
+const routes: Routes = [{path:"",component:LoginComponent},
 {path:'簽到',component: SigninComponent},
 {path:'Login',component: LoginComponent},
 {path:'Option',component: OptionComponent},
@@ -25,6 +25,7 @@ const routes: Routes = [{path:"",component:CheckComponent},
 {path:'會議室查詢',component: CheckComponent},
 {path:'ResgiterA',component: ResgiterActivityComponent},
 {path:'SelectMeeting', component: SelectMeetingComponent },
+
 
 
 
