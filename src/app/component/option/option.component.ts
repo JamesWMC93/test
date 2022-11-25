@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-option',
   templateUrl: './option.component.html',
@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   clickBtn() {
-    alert("click");
+    this.router.navigateByUrl('SelectMeeting');
   }
 
   ngOnInit(): void {
