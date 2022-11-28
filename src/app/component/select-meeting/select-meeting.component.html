@@ -7,7 +7,7 @@
     <title>Document</title>
     
 </head>
-<body>
+<body class="body">
     
     <br><br>
     <div class="container text-center font-weight-bold mb-3 ">
@@ -26,21 +26,30 @@
                 </div>
             </div>
         </div>
-        <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+        <!-- <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
         
             <div class="form-group">
                 <label for="Mname">選擇會議</label>
                 <br />
-                <select formControlName="Mname" id="Mname">
+                <select formControlName="Mname" id="Mname" >
                     <option *ngFor="let name of posts ;let i = index" [ngValue]="name.Mname">{{name.Mname}}
+                        
                     </option>
+                    
                 </select>
             </div>
+            
             <button type="submit">送出</button>
-        </form>
-        
+        </form> -->
+        <input type="text"
+        #name
+        placeholder="Name"
+        >
+
+        <button (click)="onSend(name.value)">onSend</button>
     </div>
     
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{{response}}
+    
 </body>
-</html>
+</html><!-- <button (click)="onSend(Mname)"></button> -->

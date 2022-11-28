@@ -1,25 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
 
-  private url ='https://raw.githubusercontent.com/tankhaihong/test/main/project.json';
-  private urllist ='https://raw.githubusercontent.com/tankhaihong/test/main/list.json';
-  private urlactivity ='https://raw.githubusercontent.com/tankhaihong/test/main/activity.json';
-
-  constructor(private httpClient: HttpClient) {}
-  getSignin(){
-    return this.httpClient.get(this.url);
+  constructor(private http:HttpClient) {}
+  
+  onSendService(formData:FormData):Observable<any>{
+    return this.http.post<any>('http://localhost/php/angular.php',formData)
   }
+  // intercept(req: HttpRequest<any>, next: HttpHandler) {
+  //   req = req.clone({
+  //     setHeaders: { /*有關CORS的參數就可以改在這裡了*/
+  //       'Access-Control-Allow-Origin': '*',
+  //       'Access-Control-Allow-Credentials': 'true',
+  //       'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS, PATCH',
+  //       'Access-Control-Max-Age': '86400'
+  //     }
+  //   });
+  //   return next.handle(req);
 
-  getActivity(){
-    return this.httpClient.get(this.urlactivity);
-  }
-
-  getNamelist(){
-    return this.httpClient.get(this.urllist);
-  }
+  // }
 }
