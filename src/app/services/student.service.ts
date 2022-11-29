@@ -9,7 +9,7 @@ export class StudentService {
   constructor(private http:HttpClient) {}
   
   onSendService(formData:FormData):Observable<any>{
-    return this.http.post<any>('http://localhost/php/angular.php',formData)
+    return this.http.post<any>('http://localhost:80/php/angular.php',formData)
   }
   // intercept(req: HttpRequest<any>, next: HttpHandler) {
   //   req = req.clone({

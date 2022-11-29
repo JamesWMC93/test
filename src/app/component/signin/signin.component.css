@@ -1,31 +1,31 @@
 table {
-    font-family: arial, sans-serif;
-    border: 1px solid black;
+    font-family: arial;
+    
     
   }
   
   td, th {
     border: 1px solid #5a5959c7;
     text-align: left;
-    padding: 10px;
+    padding: 15px;
   }
   
   tr:nth-child(even) {
-    background-color: #e7f0b7cc;
+    background-color: #e7f0b7;
   }
  tr{
   background-color: rgb(252, 234, 78);
  }
 
 
-html
+.body
 {
- margin:0px;
- height:100%;
- width:100%;
- background:url('TcustBuilding03.jpg')no-repeat center center fixed; 
- -webkit-background-size:cover;
- -o-background-size:cover;
- -moz-background-size:cover;
- background-size:cover;
+  /* The image used */
+  background-image: url("TcustBuilding03.jpg");
+  /* Half height */
+  height: 170vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

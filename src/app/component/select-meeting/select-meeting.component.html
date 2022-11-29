@@ -15,41 +15,23 @@
             <div class="col-12 border border-dark bg-warning">
                 <h4>您所申請的會議</h4>
             </div>
-            <div class="col-12">
-                <div class="row no-gutters">
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">通識必修：18 學分</div>
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">必修：51 學分</div>
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">總必修：69 學分</div>
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">專選：32 學分</div>
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">通選：10 學分</div>
-                    <div class="col-12 col-md-6 col-lg-4 border border-dark bg-white">總學分：128 學分</div>
-                </div>
-            </div>
+            
         </div>
-        <!-- <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
         
-            <div class="form-group">
+            <div>
                 <label for="Mname">選擇會議</label>
                 <br />
-                <select formControlName="Mname" id="Mname" >
-                    <option *ngFor="let name of posts ;let i = index" [ngValue]="name.Mname">{{name.Mname}}
-                        
+                <select #name>
+                    <option *ngFor="let name of posts ;let i = index" [ngValue]="name_id[i]" >
+                        {{name.Mname}}{{name.id}}
                     </option>
                     
                 </select>
             </div>
-            
-            <button type="submit">送出</button>
-        </form> -->
-        <input type="text"
-        #name
-        placeholder="Name"
-        >
-
-        <button (click)="onSend(name.value)">onSend</button>
+            <button (click)="onSend(name.value)">onSend</button>
     </div>
     
-{{response}}
+
     
 </body>
-</html><!-- <button (click)="onSend(Mname)"></button> -->
+</html>

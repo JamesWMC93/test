@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
@@ -12,6 +12,8 @@ import { environment } from 'src/environments/environment';
 export class SigninComponent implements OnInit {
   posts:any=[];
   lists:any=[];
+  Mname!:string;
+  
   
   constructor(private productURL: StudentService, private nameList: StudentService,private http:HttpClient) { 
     
