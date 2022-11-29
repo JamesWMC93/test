@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { StudentService } from './services/student.service'
 
 import { OptionComponent } from './component/option/option.component';
 import { RegisterComponent } from './component/register/register.component';
@@ -42,7 +43,9 @@ import { SelectMeetingComponent } from './component/select-meeting/select-meetin
     CommonModule,
     BrowserAnimationsModule,
   ],
-  // providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [
+    StudentService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
