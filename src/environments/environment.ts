@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   signin:"https://raw.githubusercontent.com/tankhaihong/test/main/project.json",
-  activity:"http://localhost:4200/Activity"
+  nameList:"https://raw.githubusercontent.com/tankhaihong/test/main/list.json",
+  activity:"https://raw.githubusercontent.com/tankhaihong/test/main/activity.json"
 };
 
 /*

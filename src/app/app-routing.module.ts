@@ -16,7 +16,7 @@ import { SelectMeetingComponent } from './component/select-meeting/select-meetin
 
 
 const routes: Routes = [{path:"",component:LoginComponent},
-{path:'簽到',component: SigninComponent},
+{path:'signin',component: SigninComponent},
 {path:'Login',component: LoginComponent},
 {path:'Option',component: OptionComponent},
 {path:'StuOption',component: StuOptionComponent},

@@ -22,9 +22,12 @@
         <label for="fname"><b>姓名：</b></label>
         <input type="text" #fname id="fname" required>&nbsp;
         
-        <label for="froom"><b>會議室：</b></label>
-        <input type="text" #froom id="froom" required>&nbsp;
-    
+        <label for="froom">場地：</label>
+        <select name="froom" #froom id="froom">
+            <option value="1">會議室一</option>
+            <option value="2">會議室二</option>
+        </select>
+        
         <br>
         <br>
     
@@ -36,11 +39,9 @@
         <hr>
         </div>
     
-        <div class="checkbtn">
           <button type="submit" class="btn btn-outline-dark" >申請</button>&nbsp;&nbsp;&nbsp;
           <a type="submit" class="btn btn-outline-dark" href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E6%9F%A5%E8%A9%A2" >查詢</a>&nbsp;&nbsp;&nbsp;     
-          <a class="btn btn-outline-dark" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
-      </div>
+          <a class="btn btn-outline-danger" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
   </form>
 
     <!-- 

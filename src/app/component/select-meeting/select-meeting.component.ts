@@ -1,52 +1,73 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
 import { __values } from 'tslib';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+import { formatDate } from '@angular/common';
+
 
 @Component({
   selector: 'app-select-meeting',
   templateUrl: './select-meeting.component.html',
   styleUrls: ['./select-meeting.component.css']
 })
-export class SelectMeetingComponent implements OnInit {
-  myimage: string = "OeZSbQUfFq.jpg";
+export class SelectMeetingComponent {
   posts: any = [];
   form: any;
-  Mname: string = "";
+  response :string="";
+  name_id: string[]=[];
+  ts:string="";
 
-  constructor(private productURL: StudentService, private fb: FormBuilder, private http: HttpClient,private router:Router) { 
-    this.form = this.fb.group({
-      Mname: new FormControl(this.Mname[0]),
-    });
+
+  constructor(private studentURL: StudentService, private fb: FormBuilder, private http: HttpClient, private router: Router) {
+    // this.form = this.fb.group({
+    //   Mname: new FormControl(this.Mname[0]),
+    // });
 
 
   }
 
 
-  onSubmit(f: any) {
 
-    if (f.invalid) {
-      alert("invalid")
-    }
-    else {
-      this.http.post("https://192.168.0.5/face/roll-call/test.php/", f)
-        .subscribe((result) => {
-          console.log("result", result);
-        })
-      console.log(f);
+  public onSubmit(f: string) {
+    const formData: FormData = new FormData()
+    formData.append('f', f)
+    this.studentURL.onSendService(formData).subscribe((res: any) => {
+      console.log(res)
+      this.response = res;
+    },
+      (err: any) => {
+        console.log(err)
+      }
+    )
+    
+  
+    
+  }
+
+  public onSend(Mname:string){
+    const formData : FormData =new FormData()
+    formData.append('Mname', Mname)
+    this.studentURL.onSendService(formData).subscribe((res: any)=>{
+      console.log(res)
+      this.response=res;
+      this.ts=res;
       alert("success")
-      this.router.navigateByUrl('簽到');
+      // this.router.navigateByUrl('signin');
+    },
+      (err: any)=>{
+      console.log(err)
     }
-
+    )
   }
 
   ngOnInit(): void {
-    this.productURL.getSignin()
+    this.http.get(environment.signin)
       .subscribe((response: any) => {
         this.posts = response;
-        this.Mname = response.Mname;
+        
       });
   }
 

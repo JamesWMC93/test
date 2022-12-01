@@ -1,50 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body class="body">
 <br><br>
-<div class="container" style="background-color: #beaaaaad;">
-    <br><br>
+<div class="container " style="background-color: #beaaaaad;">
 
-    <table style="width:30% ;position: relative;transform: translate(110%, 10%);">
 
-        <tr *ngFor="let post of posts">
+{{res}}
+   <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
+        <div *ngIf="post.id==res">
+        
+        <tr >
             <td>會議名稱</td>
             <td>{{post.Mname}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr >
             <td>會議地點</td>
             <td>{{post.place}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>主辦單位</td>
             <td>{{post.ori}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>會議日期</td>
             <td>{{post.date}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>聯絡人</td>
             <td>{{post.Cperson}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>會議簡述</td>
             <td>{{post.description}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>會議簡述</td>
             <td>{{post.description1}}</td>
         </tr>
-        <tr *ngFor="let post of posts">
+        <tr>
             <td>會議簡述</td>
             <td>{{post.Mname}}</td>
         </tr>
-
+        </div>
+        
     </table>
 
-    <br>
+    <br><br><br>
     <hr>
-    <br>
 
-    <table style="width:30% ;position: relative;transform: translate(110%, 10%);">
+
+    <table style="width:30% ;position: relative;transform: translate(115%, 10%);">
         <tr style="background-color:#beaaaa;">
             <th>序號</th>
             <th>姓名</th>
@@ -53,10 +66,9 @@
             <td style="width: 5px;">{{list.id}}</td>
             <td>{{list.name}}</td>
         </tr>
+        <br><br><br><br>
     </table>
-    <br><br>
-
+    
 </div>
-<br><br><br><br>
-
+</body>
 </html>

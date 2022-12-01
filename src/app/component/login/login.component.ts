@@ -3,6 +3,7 @@ import { StudentService } from 'src/app/services/student.service';
 import{FormBuilder,Validators,FormGroup}from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient,HttpParams } from '@angular/common/http';
+import {Title} from "@angular/platform-browser";
 
 
 
@@ -18,8 +19,9 @@ export class LoginComponent {
   registerForm!:FormGroup
   submitted=false;
 
-  constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient, private router:Router) { 
-
+  constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient, private router:Router, private titleService:Title) 
+  { 
+    this.titleService.setTitle("系統");
   }
   onSend(id: string , pwd: string){
     const formData : FormData = new FormData()

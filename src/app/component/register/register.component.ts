@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroupDirective, Validators } from '@angular/forms';//驗證效果
 import { FormBuilder } from '@angular/forms';//form
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,12 +11,15 @@ export class RegisterComponent implements OnInit {
 
  
   form:any;
-  constructor(private fb:FormBuilder) { 
+  constructor(private fb:FormBuilder, private titleService: Title) 
+  { 
+    this.titleService.setTitle("會議室使用申請");
     this.form=this.fb.group({
-      unit:["",[Validators.required,Validators.minLength(5)]],
-      reason:["",[Validators.required,Validators.minLength(8)]],
-      name:["",[Validators.required]],
-      date:["",[Validators.required]],
+      fid:["",[Validators.required,Validators.minLength(5)]],
+      fname:["",[Validators.required,Validators.minLength(8)]],
+      froom:["",[Validators.required]],
+      fdate:["",[Validators.required]],
+      ftime:["",[Validators.required]]
     });
 
   }

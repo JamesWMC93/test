@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
 import { __values } from 'tslib';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -11,17 +12,12 @@ import { __values } from 'tslib';
 export class SigninComponent implements OnInit {
   posts:any=[];
   lists:any=[];
-  form: any;
-  Mname:string="";
+  @Input("ts") res='';
   
   
-  constructor(private productURL: StudentService, private nameList: StudentService, private fb: FormBuilder,  private http: HttpClient) { 
-    this.form = this.fb.group({
-      
-      Mname: new FormControl(this.Mname[0]),
-      
-
-    });
+  
+  constructor(private productURL: StudentService, private nameList: StudentService,private http:HttpClient) { 
+    
     
   }
   onSubmit(f: any) {
@@ -30,10 +26,6 @@ export class SigninComponent implements OnInit {
       alert("invalid")
     }
     else {
-      this.http.post("https://192.168.0.5/face/roll-call/test.php/", f)
-        .subscribe((result) => {
-          console.log("result", result);
-        })
       console.log(f);
       alert("success")
 
@@ -42,16 +34,17 @@ export class SigninComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productURL.getSignin()
+    this.http.get(environment.signin)
       .subscribe((response:any) => {
         this.posts = response;
-        this.Mname = response.Mname;
       });
 
-      this.nameList.getNamelist()
+    this.http.get(environment.nameList)
       .subscribe((result:any) => {
         this.lists = result;
       });
+
+    
     
   }
 

@@ -15,14 +15,20 @@
     text-align: center;
 }
 
-/* label{
+label{
     font-size:x-large;
     margin-top: 10px;
     margin-bottom: 5px;
-    margin-left: 940px;
-} */
-/* input{
+    margin-left: 730px;
+}
+
+input{
     margin-top: 20px;
     margin-bottom: 15px;
-    margin-left: 880px;
-} */
+    margin-left: 660px;
+}
+
+button{
+    margin-top: 10px;
+    margin-left: 730px;
+}
