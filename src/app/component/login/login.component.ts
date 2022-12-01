@@ -15,25 +15,43 @@ export class LoginComponent {
 
   title="Login";
   response:string=""
-  constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient) { 
+  registerForm!:FormGroup
+  submitted=false;
+
+  constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient, private router:Router) { 
 
   }
-  onSend(id: string){
+  onSend(id: string , pwd: string){
     const formData : FormData = new FormData()
     formData.append('id',id)
+    formData.append('pwd',pwd)
     this.StudentService.onSendService(formData).subscribe
     (res=>{
       console.log(res);
       this.response= res
+      alert("success")
+      this.router.navigateByUrl('Option')
     },
     err=>{console.log(err);
     }
     );
   }
 
+  ngOnInit() {
 
-  ngOnInit(): void {
-    
+    this.registerForm =this.fb.group({
+      eid:['',Validators.required],
+      pwd:['',Validators.required]
+    })
+  }
+
+  onSubmit(){
+    this.submitted = true
+
+    if(this.registerForm.invalid){
+      return
+    }
+    alert("Success!")
   }
 
 }

@@ -1,15 +1,34 @@
 <h1 style="font-size:xx-large;text-align:center">登入畫面</h1>
+<label for="id">證號：</label>
 <input type="text" #id placeholder="id">
-<br>
-<button (click)="onSend(id.value)">sign in</button>
-
+<label for="pwd">密碼：</label>
 <input type="text" #pwd placeholder="pwd">
 <br>
-<button (click)="onSend(pwd.value)">sign in</button>
+<button (click)="onSend(id.value,pwd.value)">sign in</button>
 
 
 {{response}}
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="text-center">
+                <h1>登入畫面</h1>
+            </div>
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">證號：</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">密碼：</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
 <!-- <!DOCTYPE html>
 <html>
     <head>
