@@ -9,10 +9,24 @@
   background-size: cover;
 }
 
-.button{
-  border: 2px;
-  padding: 5px;
-  margin:2px;
+.btn{
   
+  padding: 5px;
+  margin:5px;
+  background-color: aliceblue;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  
+}
+
+.btn:hover{
+  background-color: black;
+  color: aliceblue;
+}
+
+.lb{
+  padding: 5px;
+  margin:5px;
+  background-color: aliceblue;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
