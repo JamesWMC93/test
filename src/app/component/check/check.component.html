@@ -16,28 +16,28 @@
     
     <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
-            <label for="date">日期：</label>
-            <input type="date" name="start_date" placeholder="">&nbsp;
-            ~   
-            <input type="date" name="end_date">&nbsp;&nbsp;  
+            <label for="s_date">日期：</label>
+            <!-- 起始日期 -->
+            <input type="date" #s_date name="s_date">&nbsp;
+            ~
+            <!-- 結束日期 -->
+            <input type="date" #e_date name="e_date">&nbsp;&nbsp;  
         </div>&nbsp;
-
         
         <div class="form-group" >
-            <label for="place">場地：</label>
-            <select name="froom" id="froom">
+            <label for="froom">場地：</label>
+            <select name="froom" #froom id="froom">
                 <option value="1">會議室一</option>
                 <option value="2">會議室二</option>
             </select>
-        </div>&nbsp;
+        </div>
+        &nbsp;
         <div class="checkbtn">
+            <button type="submit" class="btn btn-outline-dark">查詢</button>&nbsp;&nbsp;&nbsp;  
             <a class="btn btn-outline-dark" href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E7%94%B3%E8%AB%8B">申請</a>&nbsp;&nbsp;&nbsp;
-            <button type="submit" class="btn btn-outline-dark">查詢</button>&nbsp;&nbsp;&nbsp;     
-            <a class="btn btn-outline-dark" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-outline-danger" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
         </div>
     </form>
-
-
 
     <div class="container">
         <table style="width:100%">
@@ -149,5 +149,4 @@
         
     </div>
 </body>
-
 </html>
