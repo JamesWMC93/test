@@ -11,10 +11,12 @@
 <body class="body">
 <br><br>
 <div class="container " style="background-color: #beaaaaad;">
-    <!-- <app-select-meeting [Mname]="Mname"></app-select-meeting> -->
 
-    <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
-        <div *ngIf="post.id==001">
+
+{{res}}
+   <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
+        <div *ngIf="post.id==res">
+        
         <tr >
             <td>會議名稱</td>
             <td>{{post.Mname}}</td>
@@ -48,6 +50,7 @@
             <td>{{post.Mname}}</td>
         </tr>
         </div>
+        
     </table>
 
     <br><br><br>

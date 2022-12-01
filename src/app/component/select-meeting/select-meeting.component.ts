@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
@@ -13,12 +13,12 @@ import { formatDate } from '@angular/common';
   templateUrl: './select-meeting.component.html',
   styleUrls: ['./select-meeting.component.css']
 })
-export class SelectMeetingComponent implements OnInit {
+export class SelectMeetingComponent {
   posts: any = [];
   form: any;
-  @Input() Mname: string = "";
   response :string="";
-  name_id: number[]=[];
+  name_id: string[]=[];
+  ts:string="";
 
 
   constructor(private studentURL: StudentService, private fb: FormBuilder, private http: HttpClient, private router: Router) {
@@ -53,7 +53,9 @@ export class SelectMeetingComponent implements OnInit {
     this.studentURL.onSendService(formData).subscribe((res: any)=>{
       console.log(res)
       this.response=res;
-      this.router.navigateByUrl('signin');
+      this.ts=res;
+      alert("success")
+      // this.router.navigateByUrl('signin');
     },
       (err: any)=>{
       console.log(err)

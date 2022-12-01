@@ -19,11 +19,11 @@
         </div>
         
             <div>
-                <label for="Mname">選擇會議</label>
+                <label for="Mname" style="color :azure;" >選擇會議</label>
                 <br />
                 <select #name>
                     <option *ngFor="let name of posts ;let i = index" [ngValue]="name_id[i]" >
-                        {{name.Mname}}{{name.id}}
+                        {{name.id}}
                     </option>
                     
                 </select>
@@ -31,7 +31,7 @@
             <button (click)="onSend(name.value)">onSend</button>
     </div>
     
-
+<app-signin [ts]="response"></app-signin>
     
 </body>
 </html>

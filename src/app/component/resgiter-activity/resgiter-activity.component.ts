@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class ResgiterActivityComponent implements OnInit {
   public form:any;
   posts: any = [];
+  
   constructor(private fb: FormBuilder, private productURL: StudentService,private http:HttpClient) { 
     this.form=this.fb.group({ 
       contactnum:"",
