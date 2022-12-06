@@ -10,7 +10,7 @@ export class StudentService {
   constructor(private http:HttpClient) {}
   
   onSendService(formData:FormData):Observable<any>{
-    return this.http.post<any>('http://localhost:8080/angular.php',formData)
+    return this.http.post<any>('http://192.168.0.3/face/roll-call/db_event.php',formData)
   }
   
 }

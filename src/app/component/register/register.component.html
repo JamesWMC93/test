@@ -13,36 +13,51 @@
 <body>
 <h1>會議室使用申請表</h1>
 <p style="color:red">請務必填寫正確資料!!!</p>
-    <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <!-- <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> -->
       <div class="container">
         <hr>
+        <!-- <div class="form-group">
         <label for="fid"><b>證號：</b></label>
-        <input type="text" #fid id="fid" required>&nbsp;
-    
-        <label for="fname"><b>姓名：</b></label>
-        <input type="text" #fname id="fname" required>&nbsp;
+        <input type="text" class="form-control" id="fid" formControlName="fid">
+        <div class="text-danger" *ngIf="form.controls.fid.errors && form.controls.fid.touched &&form.controls.fid.invalid">
+          <div *ngIf="form.controls.fid.errors.required">必填</div>
+        </div>
+        </div> -->
         
-        <label for="froom">場地：</label>
-        <select name="froom" #froom id="froom">
+        <div class="form-group">
+        <label for="name"><b>姓名：</b></label>
+        <input type="text" class="form-control" id="name" #name >
+        <div class="text-danger" *ngIf="form.controls.name.errors && form.controls.name.touched &&form.controls.name.invalid">
+          <div *ngIf="form.controls.name.errors.required">必填</div>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <label for="place">場地：</label>
+        <select name="place" class="form-control" id="place" #place >
             <option value="1">會議室一</option>
             <option value="2">會議室二</option>
         </select>
-        
-        <br>
-        <br>
-    
-        <label for="fdate"><b>借用日期：</b></label>
-        <input type="date" #fdate  id="fdate" required>&nbsp;
-    
-        <label for="ftime"><b>借用時間：</b></label>
-        <input type="time" #ftime id="ftime" required>&nbsp;
-        <hr>
+        <div class="text-danger" *ngIf="form.controls.place.errors && form.controls.place.touched &&form.controls.place.invalid">
+          <div *ngIf="form.controls.place.errors.required">必填</div>
         </div>
+        </div>
+        <br>
+        <br>
     
-          <button type="submit" class="btn btn-outline-dark" >申請</button>&nbsp;&nbsp;&nbsp;
+        <label for="date"><b>借用日期：</b></label>
+        <input type="date" class="form-control" #date id="date">&nbsp;
+        
+        <!-- <label for="ftime"><b>借用時間：</b></label>
+        <input type="time" class="form-control" id="ftime" formControlName="ftime">&nbsp;
+        <hr> -->
+      </div>
+      <button class="btn btn-outline-dark" (click)="onSend(name.value,place.value,date.value)">申請</button>&nbsp;&nbsp;&nbsp;
+    
+          <!-- <button type="submit" class="btn btn-outline-dark" >申請</button>&nbsp;&nbsp;&nbsp; -->
           <a type="submit" class="btn btn-outline-dark" href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E6%9F%A5%E8%A9%A2" >查詢</a>&nbsp;&nbsp;&nbsp;     
           <a class="btn btn-outline-danger" href="http://localhost:4200/Option" >返回</a>&nbsp;&nbsp;&nbsp;
-  </form>
+  <!-- </form> -->
 
     <!-- 
     <div class="container signin">
