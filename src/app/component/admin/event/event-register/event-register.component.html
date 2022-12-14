@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
 
 </head>
 
@@ -22,28 +23,38 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
         <div class="container">
             <br>
-            <label for="id"><b>證號：</b></label>
-            <input type="text" class="form-control" name="id" formControlName="id">
+            <label for="coor"><b>申請人：</b></label>
+            <input type="text" class="form-control" name="coor" formControlName="coor">
+            &nbsp;&nbsp;
+
             
-            <label for="name"><b>姓名：</b></label>
-            <input type="text" class="form-control" name="name" formControlName="name">
+            <label for="name"><b>活動名稱：</b></label>
+            <input type="text" class="form-control" name="name" formControlName="name">&nbsp;&nbsp;
             
             <label for="place">場地：</label>
             <select name="place" class="form-control" name="place" formControlName="place">
-                <option [ngValue]="1">會議室一</option>
-                <option [ngValue]="2">會議室二</option>
-            </select>
+                <option value="a301">會議室一</option>
+                <option value="a302">會議室二</option>
+            </select>&nbsp;
             
 
             <br><br>
 
 
-            <label for="date"><b>借用日期：</b></label>
-            <input type="date" class="form-control" name="date" formControlName="date">
+            <label for="date"><b>活動日期：</b></label>
+            <input type="date" class="form-control" name="date" formControlName="date">&nbsp;&nbsp;
             
 
-            <label for="time"><b>借用時間：</b></label>
-            <input type="time" class="form-control" name="time" formControlName="time">
+            <label for="start"><b>起始時間：</b></label>
+            <input type="time" class="form-control" name="start" formControlName="start">
+
+            <label for="end"><b>結束時間：</b></label>
+            <input type="time" class="form-control" name="end" formControlName="end">
+            <br><br>
+
+            <label for="numPpl"><b>預設人數：</b></label>
+            <input type="text" class="form-control" name="numPpl" formControlName="numPpl">
+
 
             <br><br>
         </div>

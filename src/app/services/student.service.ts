@@ -10,7 +10,7 @@ export class StudentService {
   constructor(private http:HttpClient) {}
 
   onKaiXian(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.0.3/face/roll-call/test.php', formData)
+    return this.http.post<any>('http://192.168.0.6/face/roll-call/db_event.php', formData)
   }
   
   onSendService(formData:FormData):Observable<any>{

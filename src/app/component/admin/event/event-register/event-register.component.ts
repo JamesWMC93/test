@@ -21,11 +21,14 @@ export class EventRegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.form=new FormGroup({
-      id:new FormControl(null,Validators.required),
+      coor:new FormControl(null,Validators.required),
       name: new FormControl(null, Validators.required),
-      time: new FormControl(null, Validators.required),
+      start: new FormControl(null, Validators.required),
       date: new FormControl(null, Validators.required),
-      place: new FormControl(null, Validators.required)
+      place: new FormControl(null, Validators.required),
+      end: new FormControl(null, Validators.required),
+      numPpl: new FormControl(null, Validators.required),
+      
     });
   }
 
@@ -34,10 +37,12 @@ export class EventRegisterComponent implements OnInit {
     formData.append('name', form.name)
     formData.append('place', form.place)
     formData.append('date', form.date)
-    formData.append('time', form.time)
-    formData.append('id', form.id)
+    formData.append('start', form.start)
+    formData.append('coor', form.coor)
+    formData.append('end', form.end)
+    formData.append('numPpl', form.numPpl)
    
-    this.studentURL.onSendService(formData).subscribe((res: any) => {
+    this.studentURL.onKaiXian(formData).subscribe((res: any) => {
       console.log(res)
       this.response = res;
       alert("success")
