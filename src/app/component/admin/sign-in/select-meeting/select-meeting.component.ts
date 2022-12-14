@@ -19,6 +19,7 @@ export class SelectMeetingComponent {
   response :string="";
   name_id: string[]=[];
   ts:string="";
+  lallalal: any;
 
 
   constructor(private studentURL: StudentService, private fb: FormBuilder, private http: HttpClient, private router: Router) {
@@ -50,7 +51,7 @@ export class SelectMeetingComponent {
   public onSend(Mname:string){
     const formData : FormData =new FormData()
     formData.append('Mname', Mname)
-    this.studentURL.onSendService(formData).subscribe((res: any)=>{
+    this.studentURL.onSendServiceSignin(formData).subscribe((res: any)=>{
       console.log(res)
       this.response=res;
       this.ts=res;

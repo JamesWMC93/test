@@ -8,9 +8,17 @@ import {map} from 'rxjs/operators';
 export class StudentService {
 
   constructor(private http:HttpClient) {}
+
+  onKaiXian(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://192.168.0.3/face/roll-call/test.php', formData)
+  }
   
   onSendService(formData:FormData):Observable<any>{
-    return this.http.post<any>('http://192.168.0.3/face/roll-call/db_event.php',formData)
+    return this.http.post<any>('http://localhost/php/angular.php',formData)
+  }
+
+  onSendServiceSignin(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://localhost/php/signin.php', formData)
   }
   
 }

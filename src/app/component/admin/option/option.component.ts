@@ -12,7 +12,22 @@ export class OptionComponent implements OnInit {
   clickBtn() {
     this.router.navigateByUrl('SelectMeeting');
   }
+  clickMRegister() {
+    this.router.navigateByUrl('會議室申請');
+  }
 
+  clickCheck() {
+    this.router.navigateByUrl('會議室查詢');
+  }
+
+  clickEventRegister() {
+    this.router.navigateByUrl('EventRegisterComponent');
+  }
+
+
+  clickEventCheck() {
+    this.router.navigateByUrl('EventCheckComponent');
+  }
   ngOnInit(): void {
   }
 

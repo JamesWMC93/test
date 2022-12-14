@@ -1,0 +1,31 @@
+.card-header{
+    text-align: center;
+    background-color: rgb(71, 71, 71);
+    padding: 10px;
+    color: rgb(255, 251, 251);
+}
+
+:host{
+    display:block;
+    text-align: center;
+}
+
+.container{
+    background-color: lightblue ;
+    color: white;
+    text-align: center;
+}
+
+body{
+    
+    background-color: lightskyblue;
+    height: 100vh;
+    
+}
+
+.form-control{
+    width: 20%;
+    display: inline-table;
+}
+
+

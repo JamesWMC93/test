@@ -43,12 +43,13 @@ export class RegisterComponent implements OnInit {
     
   }
 
-  public onSend(name: string, place: string, date:string) {
+  public onSend(name: string, place: string, date:string,time:string) {
     const formData: FormData = new FormData()
-    formData.append('name', name)
-    formData.append('place', place)
-    formData.append('date', date)
-    this.studentURL.onSendService(formData).subscribe((res: any) => {
+    // formData.append('name', name)
+    // formData.append('place', place)
+    // formData.append('date', date)
+    formData.append('time', time)
+    this.studentURL.onKaiXian(formData).subscribe((res: any) => {
       console.log(res)
       this.response = res;
       alert("success")

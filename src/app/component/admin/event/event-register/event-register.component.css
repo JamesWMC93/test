@@ -16,9 +16,17 @@
 }
 
 body{
-    background-color: lightskyblue;
+    background-color: rgba(235, 248, 116, 0.829);
     height: 100vh;
 }
 
+.form-control.ng-invalid.ng-touched{
+    border: red 1px solid;
+
+}
+.form-control{
+    width: 20%;
+    display: inline-table;
+}
 
 

@@ -56,19 +56,35 @@
     <br><br><br>
     <hr>
 
-
-    <table style="width:30% ;position: relative;transform: translate(115%, 10%);">
+<div class="row">
+    <table style="width:30% ;">
         <tr style="background-color:#beaaaa;">
             <th>序號</th>
             <th>姓名</th>
         </tr>
-        <tr style="background-color:#ffffff;" *ngFor="let list of lists">
+        <tr style="background-color:#ffffff;" *ngFor="let list of lists,let v of truelist">
+            <!-- <div *ngIf="list.id==v.id"> -->
             <td style="width: 5px;">{{list.id}}</td>
             <td>{{list.name}}</td>
+            <!-- </div> -->
         </tr>
         <br><br><br><br>
+        
     </table>
-    
+
+    <table style="width:30% ;">
+        <tr style="background-color:#beaaaa;">
+            <th>序號</th>
+            <th>姓名</th>
+        </tr>
+        <tr style="background-color:#ffffff;" *ngFor="let list of lists,let v of truelist">
+            <!-- <div *ngIf="list.id==v.id"> -->
+            <td style="width: 5px;">{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <!-- </div> -->
+        </tr>
+    </table>
+</div>
     
 </div>
 </body>
