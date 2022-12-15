@@ -18,6 +18,8 @@ import { CheckComponent } from './component/check/check.component';
 import { ActivityComponent } from './component/activity/activity.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectMeetingComponent } from './component/select-meeting/select-meeting.component';
+import { CheckAttendComponent } from './component/check-attend/check-attend.component';
+
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -32,7 +34,8 @@ import { SelectMeetingComponent } from './component/select-meeting/select-meetin
     CheckComponent,
     ResgiterActivityComponent,
     ActivityComponent,
-    SelectMeetingComponent
+    SelectMeetingComponent,
+    CheckAttendComponent
   ],
   imports: [
     BrowserModule,

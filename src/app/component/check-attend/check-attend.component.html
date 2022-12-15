@@ -1,0 +1,16 @@
+<table class="border border-dark " style="width: 60%;">
+    <tr style="text-align: center;">
+    <th>序號</th>
+    <th>場地</th>
+    <th>借用日期</th>
+    <th>借用時間</th>
+    <th>刪除</th>
+    </tr>
+
+    <tr *ngFor="let checkatt of checklist">
+    <td>{{checklist.num}}</td>
+    <td>{{checklist.name}}</td>
+    <td>{{checklist.time}}</td>
+    <td>{{checklist.status}}</td>
+    </tr>
+</table>

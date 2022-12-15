@@ -6,7 +6,9 @@ export const environment = {
   production: false,
   signin:"https://raw.githubusercontent.com/tankhaihong/test/main/project.json",
   nameList:"https://raw.githubusercontent.com/tankhaihong/test/main/list.json",
-  activity:"https://raw.githubusercontent.com/tankhaihong/test/main/activity.json"
+  activity:"https://raw.githubusercontent.com/tankhaihong/test/main/activity.json",
+  checkatt: "https://github.com/JamesWMC93/test/blob/48c4c4625cca76e8bdaaa621348f49eec25571c5/check_att.json"
+
 };
 
 /*
