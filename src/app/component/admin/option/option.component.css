@@ -2,11 +2,7 @@ html{
     margin:0px;
     height:100vh;
     width:100%;
-<<<<<<< HEAD:src/app/component/option/option.component.css
-    background:url('/image/tcust.jpg')no-repeat center center fixed; 
-=======
     background:url('image/tcust.jpg')no-repeat center center fixed; 
->>>>>>> 94eb275b3ee5a9edefa3b8c37210e8927561d71e:src/app/component/admin/option/option.component.css
     -webkit-background-size:cover;
     -o-background-size:cover;
     -moz-background-size:cover;
