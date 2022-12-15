@@ -3,5 +3,5 @@ export const environment = {
   signin: "https://raw.githubusercontent.com/tankhaihong/test/main/project.json",
   nameList: "https://raw.githubusercontent.com/tankhaihong/test/main/list.json",
   activity: "https://raw.githubusercontent.com/tankhaihong/test/main/activity.json",
-  checkatt: "https://github.com/JamesWMC93/table/blob/943319c9edb613cf9422b1cdf5989ad1e72c3aee/check_att.json"
+  checkatt: "https://raw.githubusercontent.com/JamesWMC93/table/main/check_att.json"
 };

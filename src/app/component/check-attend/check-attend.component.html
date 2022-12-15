@@ -4,13 +4,12 @@
     <th>場地</th>
     <th>借用日期</th>
     <th>借用時間</th>
-    <th>刪除</th>
     </tr>
 
-    <tr *ngFor="let checkatt of checklist">
-    <td>{{checklist.num}}</td>
-    <td>{{checklist.name}}</td>
-    <td>{{checklist.time}}</td>
-    <td>{{checklist.status}}</td>
+    <tr *ngFor="let checkatt of checklist" style="text-align: center;margin-bottom: 10px;">
+    <td>{{checkatt.num}}</td>
+    <td>{{checkatt.name}}</td>
+    <td>{{checkatt.att_time}}</td>
+    <td>{{checkatt.status}}</td>
     </tr>
 </table>
