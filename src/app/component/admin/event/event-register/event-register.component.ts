@@ -34,20 +34,20 @@ export class EventRegisterComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    const formData: FormData = new FormData()
-    formData.append('name', form.name)
-    formData.append('place', form.place)
-    formData.append('date', form.date)
-    formData.append('start', form.start)
-    formData.append('coor', form.coor)
-    formData.append('end', form.end)
-    formData.append('numPpl', form.numPpl)
+
 
     if (form.invalid) {
       alert("資料不完整")
     }
-    else 
-    {
+    else {
+      const formData: FormData = new FormData()
+      formData.append('name', form.name)
+      formData.append('place', form.place)
+      formData.append('date', form.date)
+      formData.append('start', form.start)
+      formData.append('coor', form.coor)
+      formData.append('end', form.end)
+      formData.append('numPpl', form.numPpl)
       this.router.navigateByUrl('EventRegisterComponent');
       this.studentURL.onKaiXian(formData).subscribe((res: any) => {
         console.log(res)
