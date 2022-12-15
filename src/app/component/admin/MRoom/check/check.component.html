@@ -8,8 +8,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="check.component.css">
+<script src="angularjs/angular.min.js" type="text/javascript"></script>
 </head>
-<body>
+<body ng-app="app" ng-controller="tableController">
     <div class="container">
         <h1>會議室使用申請查詢</h1>
     </div><br>
@@ -47,10 +48,10 @@
             <th>借用日期</th>
             <th>借用時間</th>
             <th>刪除</th>
+            </tr>
 
-        </tr>
-            <tr>
-            <td>1</td>
+            <tr *ngFor="let arr of array">
+            <td>{{arr.num}}</td>
             <td>會議室一</td>
             <td>2022/05/01</td>
             <td>0800</td>
@@ -65,88 +66,16 @@
             <td><input type="button" value="刪除" onclick="self.close()"></td>
             </tr>
 
-            <tr>
-            <td>3</td>
-            <td>會議室一</td>
-            <td>2022/08/15</td>
-            <td>1330</td>
-            <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-            
-            <tr>
-            <td>4</td>
-            <td>會議室二</td>
-            <td>2022/08/15</td>
-            <td>1530</td>
-            <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-            
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>會議室二</td>
-                <td>2022/08/15</td>
-                <td>1530</td>
-                <td><input type="button" value="刪除" onclick="self.close()"></td>
-            </tr>
+            <!-- <tr ng-repeat="val in rows">
+                <td>{{val.ff}}</td>
+                <td>{{val.fs}}</td>
+                <td>{{val.ft}}</td>
+                <td><a href="#" ng-click=
+                    "remThis($index, content)">
+                        click here</a>
+                </td> -->
 
         </table>
-        
     </div>
 </body>
 </html>

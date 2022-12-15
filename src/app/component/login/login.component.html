@@ -1,13 +1,16 @@
+<div class="container" style="text-align: center;">
 <h1 style="font-size:xx-large;text-align:center">登入畫面</h1>
-<label for="id">證號：</label>
+<label for="id" class="text-dark col-12 col-sm-6 col-lg-3" style="font-size: x-large;margin-top:10px;margin-bottom: 10px;">證號：</label>
 <br>
 <input type="text" #id placeholder="id">
 <br>
-<label for="pwd">密碼：</label>
+<label for="pwd" class="text-dark col-12 col-sm-6 col-lg-3" style="font-size: x-large;margin-top:10px;margin-bottom: 10px;">密碼：</label>
 <br>
 <input type="text" #pwd placeholder="pwd">
 <br>
+<br>
 <button (click)="onSend(id.value,pwd.value)" class="btn btn-outline-success">登入</button>
+</div>
 
 
 {{response}}

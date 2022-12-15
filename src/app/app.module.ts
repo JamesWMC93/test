@@ -20,8 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectMeetingComponent } from './component/admin/sign-in/select-meeting/select-meeting.component';
 import { EventRegisterComponent } from './component/admin/event/event-register/event-register.component';
 import { EventCheckComponent } from './component/admin/event/event-check/event-check.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatIconModule } from '@angular/material';
+
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -49,8 +48,7 @@ import { MatIconModule } from '@angular/material';
     FormsModule,
     CommonModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatIconModule
+
   ],
   providers:[
     StudentService,
