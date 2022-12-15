@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OptionComponent } from './component/option/option.component';
+import { OptionComponent } from './component/admin/option/option.component';
 import { AppComponent } from './app.component';
-import { SigninComponent } from './component/signin/signin.component';
+import { SigninComponent } from './component/admin/sign-in/signin/signin.component';
 import { LoginComponent } from './component/login/login.component';
-import { StuOptionComponent } from './component/stu-option/stu-option.component';
-import { ActivityComponent } from './component/activity/activity.component';
-import { RegisterComponent } from './component/register/register.component';
-import { CheckComponent } from './component/check/check.component';
+import { StuOptionComponent } from './component/student/stu-option/stu-option.component';
+import { ActivityComponent } from './component/student/activity/activity.component';
+import { RegisterComponent } from './component/admin/MRoom/register/register.component';
+import { CheckComponent } from './component/admin/MRoom/check/check.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ResgiterActivityComponent } from './component/resgiter-activity/resgiter-activity.component';
-import { SelectMeetingComponent } from './component/select-meeting/select-meeting.component';
-import { CheckAttendComponent } from './component/check-attend/check-attend.component';
+import { ResgiterActivityComponent } from './component/student/resgiter-activity/resgiter-activity.component';
+import { SelectMeetingComponent } from './component/admin/sign-in/select-meeting/select-meeting.component';
+import { EventRegisterComponent } from './component/admin/event/event-register/event-register.component';
+import { EventCheckComponent } from './component/admin/event/event-check/event-check.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [{path:"",component:LoginComponent},
 {path:'會議室查詢',component: CheckComponent},
 {path:'ResgiterA',component: ResgiterActivityComponent},
 {path:'SelectMeeting', component: SelectMeetingComponent },
-{path:'CheckAttend', component: CheckAttendComponent },
+{path:'EventRegisterComponent', component: EventRegisterComponent },
+{path:'EventCheckComponent', component: EventCheckComponent },
 
 
 

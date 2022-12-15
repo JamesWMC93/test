@@ -12,11 +12,13 @@ import { environment } from 'src/environments/environment';
 export class SigninComponent implements OnInit {
   posts:any=[];
   lists:any=[];
+  truelist:any=[];
+  test:any=true;
   @Input("ts") res='';
   
   
   
-  constructor(private productURL: StudentService, private nameList: StudentService,private http:HttpClient) { 
+  constructor(private http:HttpClient) { 
     
     
   }
@@ -33,6 +35,10 @@ export class SigninComponent implements OnInit {
 
   }
 
+  onStart(){
+    
+  }
+
   ngOnInit(): void {
     this.http.get(environment.signin)
       .subscribe((response:any) => {
@@ -44,6 +50,10 @@ export class SigninComponent implements OnInit {
         this.lists = result;
       });
 
+    this.http.get(environment.TrueNameList)
+      .subscribe((result: any) => {
+        this.truelist = result;
+      });
     
     
   }

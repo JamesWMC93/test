@@ -7,18 +7,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StudentService } from './services/student.service'
 
-import { OptionComponent } from './component/option/option.component';
-import { RegisterComponent } from './component/register/register.component';
-import { ResgiterActivityComponent } from './component/resgiter-activity/resgiter-activity.component';
+import { OptionComponent } from './component/admin/option/option.component';
+import { RegisterComponent } from './component/admin/MRoom/register/register.component';
+import { ResgiterActivityComponent } from './component/student/resgiter-activity/resgiter-activity.component';
 import { AppComponent } from './app.component';
-import{ SigninComponent} from './component/signin/signin.component';
+import { SigninComponent } from './component/admin/sign-in/signin/signin.component';
 import { LoginComponent } from './component/login/login.component';
-import { StuOptionComponent } from './component/stu-option/stu-option.component';
-import { CheckComponent } from './component/check/check.component';
-import { ActivityComponent } from './component/activity/activity.component';
+import { StuOptionComponent } from './component/student/stu-option/stu-option.component';
+import { CheckComponent } from './component/admin/MRoom/check/check.component';
+import { ActivityComponent } from './component/student/activity/activity.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SelectMeetingComponent } from './component/select-meeting/select-meeting.component';
-import { CheckAttendComponent } from './component/check-attend/check-attend.component';
+import { SelectMeetingComponent } from './component/admin/sign-in/select-meeting/select-meeting.component';
+import { EventRegisterComponent } from './component/admin/event/event-register/event-register.component';
+import { EventCheckComponent } from './component/admin/event/event-check/event-check.component';
 
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -35,7 +36,9 @@ import { CheckAttendComponent } from './component/check-attend/check-attend.comp
     ResgiterActivityComponent,
     ActivityComponent,
     SelectMeetingComponent,
-    CheckAttendComponent
+    EventRegisterComponent,
+    EventCheckComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -45,14 +48,12 @@ import { CheckAttendComponent } from './component/check-attend/check-attend.comp
     FormsModule,
     CommonModule,
     BrowserAnimationsModule,
-    
+
   ],
   providers:[
     StudentService,
   ],
-  // providers: [{
-  //   provide: HTTP_INTERCEPTORS, useClass: StudentService, multi: true}
-  // ],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

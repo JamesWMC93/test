@@ -21,14 +21,14 @@
             <div>
                 <label for="Mname" style="color :azure;" >選擇會議</label>
                 <br />
-                <select #name>
-                    <option *ngFor="let name of posts ;let i = index" [ngValue]="name_id[i]" >
-                        {{name.id}}
-                    </option>
-                    
+                <select [(ngModel)]="lallalal" class="lb">
+                    <option *ngFor="let name of posts ;let i = index" [value]="name.id" >
+                        {{name.Mname}}
+                    </option> 
                 </select>
+                
             </div>
-            <button (click)="onSend(name.value)">onSend</button>
+            <button class="btn" (click)="onSend(lallalal)">選擇會議</button>
     </div>
     
 <app-signin [ts]="response"></app-signin>

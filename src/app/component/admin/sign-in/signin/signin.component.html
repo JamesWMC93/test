@@ -13,7 +13,7 @@
 <div class="container " style="background-color: #beaaaaad;">
 
 
-{{res}}
+
    <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
         <div *ngIf="post.id==res">
         
@@ -23,7 +23,7 @@
         </tr>
         <tr >
             <td>會議地點</td>
-            <td>{{post.place}}</td>
+            <td #place>{{post.place}}</td>
         </tr>
         <tr>
             <td>主辦單位</td>
@@ -56,18 +56,34 @@
     <br><br><br>
     <hr>
 
-
-    <table style="width:30% ;position: relative;transform: translate(115%, 10%);">
+<div class="container">
+    <table style="width:30% ;display: inline-table;">
         <tr style="background-color:#beaaaa;">
             <th>序號</th>
             <th>姓名</th>
         </tr>
         <tr style="background-color:#ffffff;" *ngFor="let list of lists">
+            <!-- <div *ngIf="list.id==v.id"> -->
             <td style="width: 5px;">{{list.id}}</td>
             <td>{{list.name}}</td>
+            <!-- </div> -->
         </tr>
-        <br><br><br><br>
+        <br><br><br><br>        
     </table>
+
+    <table style="width:30%; display: inline-table;">
+        <tr style="background-color:#beaaaa;">
+            <th>序號</th>
+            <th>姓名</th>
+        </tr>
+        <tr style="background-color:#ffffff;" *ngFor="let list of lists,let v of truelist">
+            <!-- <div *ngIf="list.id==v.id"> -->
+            <td style="width: 5px;">{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <!-- </div> -->
+        </tr>
+    </table>
+</div>
     
 </div>
 </body>

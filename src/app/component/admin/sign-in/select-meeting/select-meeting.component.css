@@ -1,0 +1,32 @@
+.body {
+  /* The image used */
+  background-image: url("image/green.jpg");
+  /* Half height */
+  height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn{
+  
+  padding: 5px;
+  margin:5px;
+  background-color: aliceblue;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  
+}
+
+.btn:hover{
+  background-color: black;
+  color: aliceblue;
+}
+
+.lb{
+  padding: 5px;
+  margin:5px;
+  background-color: aliceblue;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
