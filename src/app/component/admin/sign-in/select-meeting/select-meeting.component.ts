@@ -1,11 +1,10 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
-import { FormBuilder, FormControl } from '@angular/forms';//form
+import { FormBuilder } from '@angular/forms';//form
 import { __values } from 'tslib';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { formatDate } from '@angular/common';
 
 
 @Component({
@@ -15,9 +14,7 @@ import { formatDate } from '@angular/common';
 })
 export class SelectMeetingComponent {
   posts: any = [];
-  form: any;
-  response :string="";
-  name_id: string[]=[];
+  response :string="";  
   ts:string="";
   lallalal: any;
 
@@ -30,23 +27,6 @@ export class SelectMeetingComponent {
 
   }
 
-
-
-  public onSubmit(f: string) {
-    const formData: FormData = new FormData()
-    formData.append('f', f)
-    this.studentURL.onSendService(formData).subscribe((res: any) => {
-      console.log(res)
-      this.response = res;
-    },
-      (err: any) => {
-        console.log(err)
-      }
-    )
-    
-  
-    
-  }
 
   public onSend(Mname:string){
     const formData : FormData =new FormData()

@@ -13,7 +13,7 @@
   
   padding: 5px;
   margin:5px;
-  background-color: aliceblue;
+  outline: solid rgb(6, 56, 58);
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   
 }
@@ -30,3 +30,11 @@
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.container{
+    background-color: rgba(225, 230, 181, 0.884) ;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.178) 5px 5px;
+    font-family: DFKai-sb;
+    font-size:medium;
+}

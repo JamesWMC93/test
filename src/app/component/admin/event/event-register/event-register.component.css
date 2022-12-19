@@ -11,22 +11,32 @@
 }
 
 .container{
-    background-color: lightblue ;
+    background-color: rgba(86, 85, 107, 0.897) ;
     color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.178) 5px 5px;
+    font-family: DFKai-sb;
+    font-weight: bold;
 }
 
 body{
-    background-color: rgba(235, 248, 116, 0.829);
-    height: 100vh;
+     margin:0px;
+    height:100vh;
+    width:100%;
+    background:url('image/white.jpg')no-repeat center center fixed; 
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
 }
 
 .form-control.ng-invalid.ng-touched{
-    border: red 1px solid;
+    border: red 2.5px solid;
 
 }
-.form-control{
-    width: 20%;
+/* .form-control{
+    width: 50%;
     display: inline-table;
-}
+} */
 
 

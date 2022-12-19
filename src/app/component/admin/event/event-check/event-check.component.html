@@ -1,1 +1,26 @@
-<p>event-check works!</p>
+<div class="list-group container">
+    <div class="card-header">
+        以下是您以申請的活動，按取查詢
+    </div>
+    <ul *ngFor="let activity of activities;let i = index "class="list-group"  >
+        <li class="list-group-item list-group-item-action" >
+            <div class="col-12 col-md-11 row no-gutters">
+                <div class="col-12 text-primary">活動名稱 : <b>{{activity.name}}</b></div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">單號 : <b>{{activity.id}}</b></div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">地點 : <b>{{activity.place}}</b></div>
+                <!-- <div class="text-dark col-12 col-sm-6 col-lg-3">起始日 : <b>{{activity.sdate}}</b></div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">截止日 : <b>{{activity.edate}}</b></div> -->
+                <div class="text-dark col-6 col-lg-3">時間F : <b>{{activity.timeF}} </b></div>
+                <div class="text-dark col-6 col-lg-3">時間T : <b>{{activity.timeT}} </b></div>
+                <div class="text-dark col-12">聯絡人 : <b>{{activity.Cperson}}</b></div>
+                <div class="text-dark col-12">計劃人數 : <b>{{activity.numberP}}</b></div>
+                <div class="text-dark col-12">報名人數 : <b>{{activity.Rnumber}}</b></div>
+                <button class="btn" (click)="clickBtn(activity.id)">查詢</button>
+            </div>
+
+        </li>
+
+    </ul>
+    
+{{res}}
+</div>

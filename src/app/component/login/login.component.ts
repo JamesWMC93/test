@@ -7,6 +7,7 @@ import {Title} from "@angular/platform-browser";
 
 
 
+
 @Component({
   selector: 'app-component',
   templateUrl: './login.component.html',
@@ -18,6 +19,7 @@ export class LoginComponent {
   response:string=""
   registerForm!:FormGroup
   submitted=false;
+ 
 
   constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient, private router:Router, private titleService:Title) 
   { 

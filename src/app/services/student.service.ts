@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
@@ -8,8 +8,23 @@ import {map} from 'rxjs/operators';
 export class StudentService {
 
   constructor(private http:HttpClient) {}
+  msgContent = new Subject<string>();
 
-  onKaiXian(formData: FormData): Observable<any> {
+
+  setMessage(value: string) {
+    this.msgContent.next(value);
+  }
+
+
+  getMessage() {
+    return this.msgContent.asObservable();
+  }
+
+  onCheckEvent(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://192.168.182.226/face/roll-call/db_read_event.php', formData)
+  }
+
+  onRegisterEvent(formData: FormData): Observable<any> {
     return this.http.post<any>('http://192.168.0.6/face/roll-call/db_event.php', formData)
   }
   
@@ -21,4 +36,5 @@ export class StudentService {
     return this.http.post<any>('http://localhost/php/signin.php', formData)
   }
   
+
 }

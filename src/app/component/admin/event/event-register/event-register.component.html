@@ -13,58 +13,64 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>申請活動申請表</h1>
-    <p style="color:red">請務必填寫正確資料!!!</p>
+    <div class="bg-secondary text-white py-2 " style="font-family:DFKai-sb;font-size: xx-large;">申請活動申請表</div>
+    <p style="color:red;font-weight:bold;">請務必填寫正確資料!!!</p>
     <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
         <div class="container">
-            <br>
-            <label for="coor"><b>申請人：</b></label>
-            <input type="text" class="form-control" name="coor" formControlName="coor">
-            &nbsp;&nbsp;
+            <div class="row justify-content-center">
+                <br>
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="coor">申請人：</label>
+                    <input type="text" class="form-control" name="coor" formControlName="coor" placeholder="id">
+                </div>
 
-            
-            <label for="name"><b>活動名稱：</b></label>
-            <input type="text" class="form-control" name="name" formControlName="name">&nbsp;&nbsp;
-            
-            <label for="place">場地：</label>
-            <select name="place" class="form-control" name="place" formControlName="place">
-                <option value="a301">會議室一</option>
-                <option value="a302">會議室二</option>
-            </select>&nbsp;
-            
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="name">活動名稱：</label>
+                    <input type="text" class="form-control" name="name" formControlName="name">
+                </div>
 
-            <br><br>
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="place" >場地：</label>
+                    <select name="place" class="form-control" name="place" formControlName="place" >
+                        <option *ngFor="let mroom of MRoom" [value]=mroom.id>{{mroom.name}} </option>                       
+                    </select>
+                    
+                </div>
 
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="date">活動日期：</label>
+                    <input type="date" class="form-control" name="date" formControlName="date">
+                </div>
 
-            <label for="date"><b>活動日期：</b></label>
-            <input type="date" class="form-control" name="date" formControlName="date">&nbsp;&nbsp;
-            
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="start">起始時間：</label>
+                    <input type="time" class="form-control" name="start" formControlName="start">
+                </div>
 
-            <label for="start"><b>起始時間：</b></label>
-            <input type="time" class="form-control" name="start" formControlName="start">
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="end">結束時間：</label>
+                    <input type="time" class="form-control" name="end" formControlName="end">
+                    
+                </div>
 
-            <label for="end"><b>結束時間：</b></label>
-            <input type="time" class="form-control" name="end" formControlName="end">
-            <br><br>
+                <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
+                    <label for="numPpl">預設人數：</label>
+                    <input type="text" class="form-control" name="numPpl" formControlName="numPpl">
+                </div>
 
-            <label for="numPpl"><b>預設人數：</b></label>
-            <input type="text" class="form-control" name="numPpl" formControlName="numPpl">
-
-
-            <br><br>
+                
+            </div>
         </div>
-        <!-- <button class="btn btn-outline-dark"
-        (click)="onSend(name.value,place.value,date.value)">申請</button>&nbsp;&nbsp;&nbsp; -->
 
-        <button type="submit" class="btn btn-outline-dark mt-3">申請</button>&nbsp;&nbsp;&nbsp;
-        <a type="submit" class="btn btn-outline-dark mt-3"
-            href="http://localhost:4200/%E6%9C%83%E8%AD%B0%E5%AE%A4%E6%9F%A5%E8%A9%A2">查詢</a>&nbsp;&nbsp;&nbsp;
-        <a class="btn btn-outline-danger mt-3" href="http://localhost:4200/Option">返回</a>&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-outline-primary mt-3">申請</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn" on-click="clickEventCheck()" class="btn btn-outline-success mt-3">查詢</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn" on-click="clickOption()" class="btn btn-outline-danger mt-3">返回</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn" on-click="clickEventRegister()" class="btn btn-outline-danger mt-3">fdsafd</button>&nbsp;&nbsp;&nbsp;
     </form>
 
 

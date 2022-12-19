@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
     // formData.append('place', place)
     // formData.append('date', date)
     formData.append('time', time)
-    this.studentURL.onKaiXian(formData).subscribe((res: any) => {
+    this.studentURL.onRegisterEvent(formData).subscribe((res: any) => {
       console.log(res)
       this.response = res;
       alert("success")

@@ -5,4 +5,5 @@ export const environment = {
   activity: "https://raw.githubusercontent.com/tankhaihong/test/main/activity.json",
   checkatt: "https://raw.githubusercontent.com/JamesWMC93/table/main/check_att.json",
   TrueNameList: "https://raw.githubusercontent.com/tankhaihong/test/main/trueNameList.json",
+  MeetingRoom:"https://raw.githubusercontent.com/tankhaihong/test/main/MeetingRoom.json"
 };

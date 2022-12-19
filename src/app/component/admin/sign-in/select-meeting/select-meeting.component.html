@@ -8,18 +8,17 @@
     
 </head>
 <body class="body">
-    
-    <br><br>
-    <div class="container text-center font-weight-bold mb-3 ">
-        <div class="row no-gutters text-center">
-            <div class="col-12 border border-dark bg-warning">
-                <h4>您所申請的會議</h4>
-            </div>
-            
+    <div class="row no-gutters text-center" >
+        <div class="text-white py-2 "style="font-family:DFKai-sb;font-size: xx-large;background-color: rgb(6, 56, 58);">
+            <h4>您所申請的活動</h4>
         </div>
+    
+    </div>
+    
+    <div class="container text-center mb-3 mt-2 ">
         
             <div>
-                <label for="Mname" style="color :azure;" >選擇會議</label>
+                <label for="Mname" style="color :rgb(2, 2, 2);font-size: x-large;" >選擇活動</label>
                 <br />
                 <select [(ngModel)]="lallalal" class="lb">
                     <option *ngFor="let name of posts ;let i = index" [value]="name.id" >
@@ -28,7 +27,7 @@
                 </select>
                 
             </div>
-            <button class="btn" (click)="onSend(lallalal)">選擇會議</button>
+            <button class="btn" (click)="onSend(lallalal)">選擇活動</button>
     </div>
     
 <app-signin [ts]="response"></app-signin>

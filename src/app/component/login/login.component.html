@@ -1,16 +1,52 @@
-<div class="container" style="text-align: center;">
-<h1 style="font-size:xx-large;text-align:center">登入畫面</h1>
-<label for="id" class="text-dark col-12 col-sm-6 col-lg-3" style="font-size: x-large;margin-top:10px;margin-bottom: 10px;">證號：</label>
-<br>
-<input type="text" #id placeholder="id">
-<br>
-<label for="pwd" class="text-dark col-12 col-sm-6 col-lg-3" style="font-size: x-large;margin-top:10px;margin-bottom: 10px;">密碼：</label>
-<br>
-<input type="text" #pwd placeholder="pwd">
-<br>
-<br>
-<button (click)="onSend(id.value,pwd.value)" class="btn btn-outline-success">登入</button>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<br><br>
+
+<div class="container-fluid  col-6" style="text-align: center;">
+    <div class="card-header font-weight-bold">
+        <font size="6px">登入頁面</font>
+    </div>
+    <div class="card-body">
+        <label for="id" class="text-dark col-12 col-sm-6 col-lg-3"></label>
+        <h4 style="font-size: x-large;margin-top:10px;margin-bottom: 10px;font-weight: bold;">證號：</h4>
+        <mat-icon style="color: rgb(104, 127, 242);">person</mat-icon>
+        <input type="text" #id placeholder="id">
+
+        <br>
+
+        <label for="pwd" class="text-dark"></label>
+        <h4 style="font-size: x-large;margin-top:10px;margin-bottom: 10px;font-weight: bold;">密碼：</h4>
+
+        <mat-icon style="color: rgb(104, 127, 242);">lock</mat-icon>
+        <input type="password" #pwd placeholder="pwd">
+
+
+        <br>
+        <br>
+        <button (click)="onSend(id.value,pwd.value)" class="btn btn-outline-success mb-3">登入</button>
+    </div>
+
 </div>
 
 
-{{response}}
+
+
+
+
+
+</html>

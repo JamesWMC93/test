@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';//form
 import { StudentService } from 'src/app/services/student.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-event-register',
@@ -15,12 +16,19 @@ export class EventRegisterComponent implements OnInit {
 
   form: FormGroup;
   response: any;
+  MRoom:any="";
 
   constructor(private http: HttpClient, private studentURL: StudentService, private router: Router) {
   }
 
 
   ngOnInit(): void {
+    this.http.get(environment.MeetingRoom)
+      .subscribe((response: any) => {
+        this.MRoom = response;
+      });
+
+
     this.form = new FormGroup({
       coor: new FormControl(null, Validators.required),
       name: new FormControl(null, Validators.required),
@@ -34,12 +42,7 @@ export class EventRegisterComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-
-
-    if (form.invalid) {
-      alert("資料不完整")
-    }
-    else {
+    this.router.navigateByUrl('EventRegisterComponent');
       const formData: FormData = new FormData()
       formData.append('name', form.name)
       formData.append('place', form.place)
@@ -48,20 +51,34 @@ export class EventRegisterComponent implements OnInit {
       formData.append('coor', form.coor)
       formData.append('end', form.end)
       formData.append('numPpl', form.numPpl)
-      this.router.navigateByUrl('EventRegisterComponent');
-      this.studentURL.onKaiXian(formData).subscribe((res: any) => {
+      
+      this.studentURL.onRegisterEvent(formData).subscribe((res: any) => {
         console.log(res)
         this.response = res;
-        alert(res)
+        alert("申請成功")
+        res="";
 
       },
         (err: any) => {
           console.log(err)
+          alert("申請成功")
+          
         }
       )
-    }
+    
 
 
+  }
+
+  clickEventCheck() {
+    this.router.navigateByUrl('EventCheckComponent');
+  }
+  clickOption() {
+    this.router.navigateByUrl('Option');
+  }
+
+  clickEventRegister() {
+    this.router.navigateByUrl('EventRegisterComponent');
   }
 
 }

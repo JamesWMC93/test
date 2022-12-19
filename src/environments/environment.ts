@@ -8,7 +8,7 @@ export const environment = {
   nameList:"https://raw.githubusercontent.com/tankhaihong/test/main/list.json",
   activity:"https://raw.githubusercontent.com/tankhaihong/test/main/activity.json",
   checkatt: "https://raw.githubusercontent.com/JamesWMC93/table/main/check_att.json",
-
+  MeetingRoom: "https://raw.githubusercontent.com/tankhaihong/test/main/MeetingRoom.json",
   TrueNameList: "https://raw.githubusercontent.com/tankhaihong/test/main/trueNameList.json",
 };
 
