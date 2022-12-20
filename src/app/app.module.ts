@@ -27,6 +27,7 @@ import { ActivityComponent } from './component/student/activity/activity.compone
 import { SelectMeetingComponent } from './component/admin/sign-in/select-meeting/select-meeting.component';
 import { EventRegisterComponent } from './component/admin/event/event-register/event-register.component';
 import { EventCheckComponent } from './component/admin/event/event-check/event-check.component';
+import { CheckEventInformationComponent } from './component/admin/event/check-event-information/check-event-information.component';
 
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -45,6 +46,7 @@ import { EventCheckComponent } from './component/admin/event/event-check/event-c
     SelectMeetingComponent,
     EventRegisterComponent,
     EventCheckComponent,
+    CheckEventInformationComponent,
     
   ],
   imports: [

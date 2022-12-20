@@ -14,7 +14,7 @@ import { ResgiterActivityComponent } from './component/student/resgiter-activity
 import { SelectMeetingComponent } from './component/admin/sign-in/select-meeting/select-meeting.component';
 import { EventRegisterComponent } from './component/admin/event/event-register/event-register.component';
 import { EventCheckComponent } from './component/admin/event/event-check/event-check.component';
-
+import { CheckEventInformationComponent } from './component/admin/event/check-event-information/check-event-information.component';
 
 
 const routes: Routes = [{path:"",component:LoginComponent},
@@ -29,9 +29,7 @@ const routes: Routes = [{path:"",component:LoginComponent},
 {path:'SelectMeeting', component: SelectMeetingComponent },
 {path:'EventRegisterComponent', component: EventRegisterComponent },
 {path:'EventCheckComponent', component: EventCheckComponent },
-
-
-
+{path:'CheckEventInformationComponent', component: CheckEventInformationComponent },
 
 ]
 

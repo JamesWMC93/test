@@ -32,13 +32,14 @@ export class EventCheckComponent {
     });
   }
 
-  clickBtn(activities:any) {
-
+  clickCheck(activities:any) {
+    this.router.navigateByUrl("CheckEventInformationComponent");
     const formData: FormData = new FormData()
     formData.append('Mname', activities)
     this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
       console.log(res)
       this.response = res;
+      this.studentURL.setMessage(res);
       alert("success")
       // this.router.navigateByUrl('signin');
     },

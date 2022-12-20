@@ -42,7 +42,7 @@ export class EventRegisterComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    this.router.navigateByUrl('EventRegisterComponent');
+     
       const formData: FormData = new FormData()
       formData.append('name', form.name)
       formData.append('place', form.place)
@@ -62,7 +62,7 @@ export class EventRegisterComponent implements OnInit {
         (err: any) => {
           console.log(err)
           alert("申請成功")
-          
+          window.location.reload();
         }
       )
     

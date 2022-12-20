@@ -1,24 +1,30 @@
 <html>
-
+<div class="container-fluid">
     <br>
-    &nbsp;&nbsp;&nbsp;
-    <div class="dropdown">
-        <button class="dropbtn">會議室</button>
-        <div class="dropdown-content">
-        <a on-click='clickMRegister()'>會議室使用申請</a>
-        <a on-click='clickCheck()'>會議使用申請查詢</a>
-    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div style="display:inline;margin-right:50px;">
+        <div class="dropdown ">
+            <button class="dropbtn">會議室</button>
+            <div class="dropdown-content">
+                <a on-click='clickMRegister()'>會議室使用申請</a>
+                <a on-click='clickCheck()'>會議使用申請查詢</a>
+            </div>
+        </div>
     </div>
-    <div class="dropdown">
-        <button class="dropbtn">創辦活動</button>
-        <div class="dropdown-content">
-            <a on-click="clickEventRegister()">活動申請</a>
-            <a (click)="clickEventCheck(ks)">活動申請查詢</a>
-            
-        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
-    <button class="btn" on-click="clickBtn()">簽到</button>
 
+    <div style="display:inline;margin-right:50px;">
+        <div class="dropdown col-mr-5">
+            <button class="dropbtn">創辦活動</button>
+            <div class="dropdown-content">
+                <a on-click="clickEventRegister()">活動申請</a>
+                <a (click)="clickEventCheck(ks)">活動申請查詢</a>
+
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn1" on-click="clickBtn()">簽到</button>
     
+
+</div>
 
 </html>
