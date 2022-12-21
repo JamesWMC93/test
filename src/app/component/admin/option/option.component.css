@@ -10,7 +10,7 @@ html{
 }
 
 .btn {
-    position: fixed;
+    position:relative;
     border:2px rgb(0, 0, 0) solid;
     background-color:lightslategray;
     color: white;

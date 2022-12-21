@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from 'src/app/services/student.service';
-import{FormBuilder,Validators,FormGroup}from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient,HttpParams } from '@angular/common/http';
-import {Title} from "@angular/platform-browser";
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Title } from "@angular/platform-browser";
 
 
 
@@ -15,47 +15,56 @@ import {Title} from "@angular/platform-browser";
 })
 export class LoginComponent {
 
-  title="Login";
-  response:string=""
-  registerForm!:FormGroup
-  submitted=false;
- 
+  title = "Login";
+  response: string = ""
+  registerForm!: FormGroup
+  submitted = false;
+  form: FormGroup;
+  
 
-  constructor(private fb: FormBuilder, private StudentService: StudentService, private http: HttpClient, private router:Router, private titleService:Title) 
-  { 
+
+  constructor(private fb: FormBuilder, private studentURL: StudentService, private http: HttpClient, private router: Router, private titleService: Title) {
     this.titleService.setTitle("系統");
   }
-  onSend(id: string , pwd: string){
-    const formData : FormData = new FormData()
-    formData.append('id',id)
-    formData.append('pwd',pwd)
-    this.StudentService.onSendService(formData).subscribe
-    (res=>{
-      console.log(res);
-      this.response= res
-      alert("success")
-      this.router.navigateByUrl('Option')
+  
+
+
+  onSubmit(form: any) {
+
+    const formData: FormData = new FormData()
+    formData.append('id', form.id)
+    formData.append('pwd', form.pwd)
+    this.studentURL.onLogin(formData).subscribe((res: any) => {
+      console.log(res)
+      this.response = res;
+      if (this.response =="success"){
+        alert("成功登錄")
+        sessionStorage.setItem('id', form.id);
+        this.router.navigateByUrl("Option")
+      }
+      else
+      {
+        alert(res)
+        window.location.reload()
+      }
+
     },
-    err=>{console.log(err);
-    }
-    );
+      (err: any) => {
+        console.log(err)
+
+      }
+    )
+
+    
+
   }
 
   ngOnInit() {
-
-    this.registerForm =this.fb.group({
-      eid:['',Validators.required],
-      pwd:['',Validators.required]
-    })
+    this.form = new FormGroup({
+      id: new FormControl(null, Validators.required),
+      pwd: new FormControl(null, Validators.required),
+    });
   }
 
-  onSubmit(){
-    this.submitted = true
-
-    if(this.registerForm.invalid){
-      return
-    }
-    alert("Success!")
-  }
 
 }

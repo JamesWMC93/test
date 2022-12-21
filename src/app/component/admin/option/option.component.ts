@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StudentService } from 'src/app/services/student.service';
@@ -7,8 +8,10 @@ import { StudentService } from 'src/app/services/student.service';
   styleUrls: ['./option.component.css']
 })
 export class OptionComponent implements OnInit {
-  ks:string="10743055"
+  
   response: any;
+  subscription: Subscription;
+
   
 
   constructor(private router: Router, private studentURL:StudentService) { }
@@ -29,16 +32,13 @@ export class OptionComponent implements OnInit {
   }
 
 
-  clickEventCheck(ks) {
+  clickEventCheck() {
     this.router.navigateByUrl('EventCheckComponent');
     const formData: FormData = new FormData()
-    formData.append('Mname', ks)
-    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
-      console.log(res)
+    formData.append('coor', sessionStorage.getItem("id"))
+    this.studentURL.onCheckEvent(formData).subscribe((res: any) => {
       this.response = res;
       this.studentURL.setMessage(res);
-      alert("success")
-      // this.router.navigateByUrl('signin');
     },
       (err: any) => {
         console.log(err)
@@ -47,6 +47,7 @@ export class OptionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -21,11 +21,12 @@
     <div class="card-header font-weight-bold">
         <font size="6px">登入頁面</font>
     </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
     <div class="card-body">
         <label for="id" class="text-dark col-12 col-sm-6 col-lg-3"></label>
         <h4 style="font-size: x-large;margin-top:10px;margin-bottom: 10px;font-weight: bold;">證號：</h4>
         <mat-icon style="color: rgb(104, 127, 242);">person</mat-icon>
-        <input type="text" #id placeholder="id">
+        <input type="text" class="form-control" name="id" formControlName="id">
 
         <br>
 
@@ -33,14 +34,14 @@
         <h4 style="font-size: x-large;margin-top:10px;margin-bottom: 10px;font-weight: bold;">密碼：</h4>
 
         <mat-icon style="color: rgb(104, 127, 242);">lock</mat-icon>
-        <input type="password" #pwd placeholder="pwd">
+        <input type="password" class="form-control" name="pwd" formControlName="pwd">
 
 
         <br>
         <br>
-        <button (click)="onSend(id.value,pwd.value)" class="btn btn-outline-success mb-3">登入</button>
+        <button type="submit" class="btn btn-outline-success mb-3">登入</button>
     </div>
-
+</form>
 </div>
 
 

@@ -17,7 +17,7 @@ export class EventCheckComponent {
   activities: any = [];
   response: any;
   res:any;
-  idd:any;
+  idd:any=sessionStorage.getItem("id");
   subscription: Subscription;
   constructor(private studentURL: StudentService, private router: Router, private http: HttpClient) { }
 
@@ -35,13 +35,13 @@ export class EventCheckComponent {
   clickCheck(activities:any) {
     this.router.navigateByUrl("CheckEventInformationComponent");
     const formData: FormData = new FormData()
-    formData.append('Mname', activities)
-    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
+    formData.append('event', activities)
+    console.log(activities)
+    this.studentURL.onReadrecord(formData).subscribe((res: any) => {
       console.log(res)
       this.response = res;
       this.studentURL.setMessage(res);
-      alert("success")
-      // this.router.navigateByUrl('signin');
+      
     },
       (err: any) => {
         console.log(err)

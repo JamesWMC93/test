@@ -11,7 +11,7 @@ export class StudentService {
   msgContent = new Subject<string>();
 
 
-  setMessage(value: string) {
+  setMessage(value: any) {
     this.msgContent.next(value);
   }
 
@@ -19,6 +19,15 @@ export class StudentService {
   getMessage() {
     return this.msgContent.asObservable();
   }
+
+  onLogin(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://192.168.182.226/face/roll-call/db_login.php', formData)
+  }
+
+  onReadrecord(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://192.168.182.226/face/roll-call/db_read_record.php', formData)
+  }
+
 
   onCheckEvent(formData: FormData): Observable<any> {
     return this.http.post<any>('http://192.168.182.226/face/roll-call/db_read_event.php', formData)

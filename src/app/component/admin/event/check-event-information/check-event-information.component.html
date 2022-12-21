@@ -1,14 +1,16 @@
 <div class="list-group container mt-3">
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-action">
+    <ul  *ngFor="let activity of res" class="list-group">
+        <li class="list-group-item list-group-item-action" >
             <div class="col-12 col-md-11 row no-gutters">
-                <div>Cras justo odio</div>
-                <div class="text-dark col-12 col-sm-6 col-lg-3">Dapibus ac facilisis in</div>
-                <div class="text-dark col-12 col-sm-6 col-lg-3">Morbi leo risus</div>
-                <div class="text-dark col-12 col-sm-6 col-lg-3">Porta ac consectetur ac</div>
-                <div class="text-dark col-12 col-sm-6 col-lg-3">Vestibulum at eros</div>
+                <div>{{activity.id}}</div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">{{activity.name}}</div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">{{activity.date}}</div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">{{activity.time}}</div>
+                <div class="text-dark col-12 col-sm-6 col-lg-3">{{activity.event_id}}</div>
             </div>
+            
         </li>
     </ul>
 </div>
-{{res}}
+
+

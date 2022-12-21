@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CheckEventInformationComponent implements OnInit {
   subscription: Subscription;
-  res: string;
+  res: any;
 
   constructor(private studentURL:StudentService,private http:HttpClient ) { }
 
