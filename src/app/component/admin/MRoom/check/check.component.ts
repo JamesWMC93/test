@@ -64,6 +64,8 @@ export class CheckComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onBack() {
+    this.router.navigateByUrl("Option")
+  }
   
 }

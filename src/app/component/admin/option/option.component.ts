@@ -32,17 +32,17 @@ export class OptionComponent implements OnInit {
   }
 
   clickMRegister(會議室申請) {
-    window.open(會議室申請, "_blank");
+    this.router.navigateByUrl('會議室申請');
   }
 
   clickCheck(會議室查詢) {
-    window.open(會議室查詢, "_blank");
-    // this.router.navigateByUrl('會議室查詢');
+    
+    this.router.navigateByUrl('會議室查詢');
   }
 
   clickEventRegister(EventRegisterComponent) {
-    window.open(EventRegisterComponent, "_blank");
-    // this.router.navigateByUrl('EventRegisterComponent');
+    
+   this.router.navigateByUrl('EventRegisterComponent');
   }
   
   clickEventCheck() {

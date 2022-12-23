@@ -4,9 +4,12 @@ import { Observable, Subject } from 'rxjs';
 import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
+  
 })
+
 export class StudentService {
 
+  
   constructor(private http:HttpClient) {}
   msgContent = new Subject<string>();
 
@@ -37,6 +40,10 @@ export class StudentService {
     return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_event.php', formData)
   }
 
+  onCheckEvent2(formData: FormData): Observable<any> {
+    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_event2.php', formData)
+  }
+
   onRegisterEvent(formData: FormData): Observable<any> {
     return this.http.post<any>('http://192.168.191.226/face/roll-call/db_event.php', formData)
   }
@@ -47,6 +54,15 @@ export class StudentService {
 
   onSendServiceSignin(formData: FormData): Observable<any> {
     return this.http.post<any>('http://localhost/php/signin.php', formData)
+  }
+
+  onStartCamera(formData: FormData): Observable<any> {
+    
+    return this.http.post<any>('http://192.168.191.137/demo/open_analysis.php', formData)
+  }
+
+  onCloseCamera(formData: FormData): Observable<any> {
+    return this.http.post<any>('https://192.168.191.137/demo/close_analysis.php', formData)
   }
   
 

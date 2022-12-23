@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';//form
 import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
  
   form:any;
   response: any;
-  constructor(private fb:FormBuilder, private titleService: Title,private http:HttpClient,private studentURL:StudentService) 
+  constructor(private fb:FormBuilder, private titleService: Title,private http:HttpClient,private studentURL:StudentService,private router:Router) 
   { 
     this.titleService.setTitle("會議室使用申請");
     this.form=this.fb.group({
@@ -59,6 +60,9 @@ export class RegisterComponent implements OnInit {
         console.log(err)
       }
     )
+  }
+  onBack(){
+    this.router.navigateByUrl("Option")
   }
 
   ngOnInit(): void {

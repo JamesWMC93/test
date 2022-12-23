@@ -5,6 +5,7 @@ import { StudentService } from 'src/app/services/student.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
 import { __values } from 'tslib';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -16,14 +17,15 @@ export class SigninComponent implements OnInit {
   truelist:any=[];
   test:any=true;
   start:string="開始點名"
-  end:string="結束點名"
+  close:string="close"
   @Input("ts") res='';
-  @Input("res") val = '';
+  
   subscription: Subscription;
+  ress: any;
   
   
   
-  constructor(private http: HttpClient, private studentURL: StudentService) { 
+  constructor(private http: HttpClient, private studentURL: StudentService,private router:Router) { 
     
     
   }
@@ -40,10 +42,11 @@ export class SigninComponent implements OnInit {
 
   }
 
-  onSendStart(start){
+  onSendStart(res){
     const formData: FormData = new FormData()
-    formData.append('start', start)
-    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
+    formData.append('event', res)
+    console.log(res)
+    this.studentURL.onStartCamera(formData).subscribe((res: any) => {
       console.log(res)
       alert("success")
       // this.router.navigateByUrl('signin');
@@ -54,10 +57,10 @@ export class SigninComponent implements OnInit {
     )
   }
 
-  onSendEnd(end) {
+  onSendEnd(close) {
     const formData: FormData = new FormData()
-    formData.append('end', end)
-    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
+    formData.append('close', close)
+    this.studentURL.onCloseCamera(formData).subscribe((res: any) => {
       console.log(res)
       alert("success")
       // this.router.navigateByUrl('signin');
@@ -66,6 +69,10 @@ export class SigninComponent implements OnInit {
         console.log(err)
       }
     )
+  }
+
+  onBack(){
+    this.router.navigateByUrl('Option');
   }
 
   ngOnInit(): void {
@@ -83,7 +90,10 @@ export class SigninComponent implements OnInit {
       .subscribe((result: any) => {
         this.truelist = result;
       });
-   
+    this.subscription = this.studentURL.getMessage().subscribe(val => {
+      this.ress = val;
+      console.log(this.ress)
+    });
     
   }
 

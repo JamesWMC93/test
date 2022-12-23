@@ -12,44 +12,42 @@
 <br><br>
 <div class="container " style="background-color: #beaaaaad;">
 
-{{val}}
 
-   <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
-        <div *ngIf="post.id==res">
-        
+
+   <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of ress">
+         
         <tr >
-            <td>會議名稱</td>
-            <td>{{post.Mname}}</td>
+            <td>活動名稱：</td>
+            <td>{{post.name}}</td>
         </tr>
         <tr >
-            <td>會議地點</td>
+            <td>活動地點：</td>
             <td #place>{{post.place}}</td>
         </tr>
         <tr>
-            <td>主辦單位</td>
-            <td>{{post.ori}}</td>
-        </tr>
-        <tr>
-            <td>會議日期</td>
+            <td>活動日期：</td>
             <td>{{post.date}}</td>
         </tr>
         <tr>
-            <td>聯絡人</td>
-            <td>{{post.Cperson}}</td>
+            <td>主辦人：</td>
+            <td>{{post.coordinator}}</td>
         </tr>
         <tr>
-            <td>會議簡述</td>
-            <td>{{post.description}}</td>
+            <td>開始時間：</td>
+            <td>{{post.start}}</td>
         </tr>
         <tr>
-            <td>會議簡述</td>
-            <td>{{post.description1}}</td>
+            <td>結束時間：</td>
+            <td>{{post.end}}</td>
         </tr>
         <tr>
-            <td>會議簡述</td>
-            <td>{{post.Mname}}</td>
+            <td>預設人數：</td>
+            <td>{{post.num_ppl}}</td>
         </tr>
-        </div>
+
+
+        
+        
         
     </table>
 
@@ -84,8 +82,11 @@
         </tr>
     </table>
 </div>
-    <button class="btn" (click)="  onSendStart(start)">開始點名</button>
-    <button class="btn1" (click)="  onSendEnd(end)">結束點名</button>
+    <button class="btn" (click)="  onSendStart(res)">開始點名</button>
+    <button class="btn1" (click)="  onSendEnd(close)">結束點名</button>
+    <button class="btn2" (click)="onBack()">返回</button>
+   
+    
 </div>
 </body>
 </html>

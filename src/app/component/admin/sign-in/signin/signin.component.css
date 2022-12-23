@@ -78,3 +78,22 @@ table {
      color: rgb(255, 255, 255);
   }
 
+.btn2 {
+  font-family: DFKai-sb;
+    background-color:rgb(15, 126, 0);
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    border:1px;
+    width: 15%;
+  }
+
+  .btn2:hover{
+    font-family: DFKai-sb;
+     background-color:rgb(94, 255, 0);
+     color: rgb(255, 255, 255);
+  }

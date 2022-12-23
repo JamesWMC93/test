@@ -57,7 +57,18 @@ export class EventRegisterComponent implements OnInit {
         this.response = res;
       if (res =="活動申請成功"){
         alert(res)
-        window.location.reload();
+        const formData: FormData = new FormData()
+        formData.append('coor', sessionStorage.getItem("id"))
+        this.router.navigateByUrl('EventCheckComponent');
+        this.studentURL.onCheckEvent(formData).subscribe((res: any) => {
+          this.response = res;
+          this.studentURL.setMessage(res);
+
+        },
+          (err: any) => {
+            console.log(err)
+          }
+        )
       }else{
         alert(res)
         window.location.reload();

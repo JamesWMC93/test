@@ -34,12 +34,14 @@ export class SelectMeetingComponent {
 
   public onSend(Mname:string){
     const formData : FormData =new FormData()
-    formData.append('Mname', Mname)
-    this.studentURL.onSendServiceSignin(formData).subscribe((res: any)=>{
-      console.log(res)
-      this.response=res;
-      this.ts=res;
+    formData.append('event2', Mname)
+    this.ts = Mname;
+    this.studentURL.onCheckEvent2(formData).subscribe((res: any)=>{
+      this.response=res;    
+      this.studentURL.setMessage(res);
+      
       alert("success")
+      
       // this.router.navigateByUrl('signin');
     },
       (err: any)=>{
@@ -59,6 +61,7 @@ export class SelectMeetingComponent {
       this.res = val;
       console.log(this.res)
     });
+    
   }
 
 
