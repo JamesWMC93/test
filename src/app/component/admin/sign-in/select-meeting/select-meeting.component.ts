@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
@@ -17,6 +18,9 @@ export class SelectMeetingComponent {
   response :string="";  
   ts:string="";
   lallalal: any;
+  subscription: Subscription;
+  mt: any;
+  res:any="";
 
 
   constructor(private studentURL: StudentService, private fb: FormBuilder, private http: HttpClient, private router: Router) {
@@ -45,11 +49,16 @@ export class SelectMeetingComponent {
   }
 
   ngOnInit(): void {
-    this.http.get(environment.signin)
+    this.http.get(environment.MeetingRoom)
       .subscribe((response: any) => {
         this.posts = response;
         
       });
+
+    this.subscription = this.studentURL.getMessage().subscribe(val => {
+      this.res = val;
+      console.log(this.res)
+    });
   }
 
 

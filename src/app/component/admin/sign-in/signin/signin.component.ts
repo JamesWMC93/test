@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { Component, Input, OnInit,ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StudentService } from 'src/app/services/student.service';
@@ -14,11 +15,15 @@ export class SigninComponent implements OnInit {
   lists:any=[];
   truelist:any=[];
   test:any=true;
+  start:string="開始點名"
+  end:string="結束點名"
   @Input("ts") res='';
+  @Input("res") val = '';
+  subscription: Subscription;
   
   
   
-  constructor(private http:HttpClient) { 
+  constructor(private http: HttpClient, private studentURL: StudentService) { 
     
     
   }
@@ -35,8 +40,32 @@ export class SigninComponent implements OnInit {
 
   }
 
-  onStart(){
-    
+  onSendStart(start){
+    const formData: FormData = new FormData()
+    formData.append('start', start)
+    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
+      console.log(res)
+      alert("success")
+      // this.router.navigateByUrl('signin');
+    },
+      (err: any) => {
+        console.log(err)
+      }
+    )
+  }
+
+  onSendEnd(end) {
+    const formData: FormData = new FormData()
+    formData.append('end', end)
+    this.studentURL.onSendServiceSignin(formData).subscribe((res: any) => {
+      console.log(res)
+      alert("success")
+      // this.router.navigateByUrl('signin');
+    },
+      (err: any) => {
+        console.log(err)
+      }
+    )
   }
 
   ngOnInit(): void {
@@ -54,7 +83,7 @@ export class SigninComponent implements OnInit {
       .subscribe((result: any) => {
         this.truelist = result;
       });
-    
+   
     
   }
 

@@ -52,17 +52,20 @@ export class EventRegisterComponent implements OnInit {
       formData.append('end', form.end)
       formData.append('numPpl', form.numPpl)
       
-      this.studentURL.onRegisterEvent(formData).subscribe((res: any) => {
-        console.log(res)
+    this.studentURL.onRegisterEvent(formData).subscribe((res: any) => {
+        
         this.response = res;
-        alert("申請成功")
-        res="";
-
+      if (res =="活動申請成功"){
+        alert(res)
+        window.location.reload();
+      }else{
+        alert(res)
+        window.location.reload();
+      }
       },
         (err: any) => {
           console.log(err)
-          alert("申請成功")
-          window.location.reload();
+          
         }
       )
     

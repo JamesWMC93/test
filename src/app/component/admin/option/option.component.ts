@@ -8,34 +8,19 @@ import { StudentService } from 'src/app/services/student.service';
   styleUrls: ['./option.component.css']
 })
 export class OptionComponent implements OnInit {
-  
+
   response: any;
   subscription: Subscription;
 
-  
 
-  constructor(private router: Router, private studentURL:StudentService) { }
+
+  constructor(private router: Router, private studentURL: StudentService) { }
+
 
   clickBtn() {
-    this.router.navigateByUrl('SelectMeeting');
-  }
-  clickMRegister() {
-    this.router.navigateByUrl('會議室申請');
-  }
-
-  clickCheck() {
-    this.router.navigateByUrl('會議室查詢');
-  }
-
-  clickEventRegister() {
-    this.router.navigateByUrl('EventRegisterComponent');
-  }
-
-
-  clickEventCheck() {
-    this.router.navigateByUrl('EventCheckComponent');
     const formData: FormData = new FormData()
     formData.append('coor', sessionStorage.getItem("id"))
+    this.router.navigateByUrl('SelectMeeting');
     this.studentURL.onCheckEvent(formData).subscribe((res: any) => {
       this.response = res;
       this.studentURL.setMessage(res);
@@ -46,8 +31,44 @@ export class OptionComponent implements OnInit {
     )
   }
 
+  clickMRegister(會議室申請) {
+    window.open(會議室申請, "_blank");
+  }
+
+  clickCheck(會議室查詢) {
+    window.open(會議室查詢, "_blank");
+    // this.router.navigateByUrl('會議室查詢');
+  }
+
+  clickEventRegister(EventRegisterComponent) {
+    window.open(EventRegisterComponent, "_blank");
+    // this.router.navigateByUrl('EventRegisterComponent');
+  }
+  
+  clickEventCheck() {
+    const formData: FormData = new FormData()
+    formData.append('coor', sessionStorage.getItem("id"))
+    this.router.navigateByUrl('EventCheckComponent');
+    this.studentURL.onCheckEvent(formData).subscribe((res: any) => {
+      this.response = res;
+      this.studentURL.setMessage(res);
+
+    },
+      (err: any) => {
+        console.log(err)
+      }
+    )
+  }
+
+
+  logout() {
+    sessionStorage.removeItem('id');
+    alert("已登出")
+    this.router.navigateByUrl('Login');
+  }
+
   ngOnInit(): void {
-    
+
   }
 
 }

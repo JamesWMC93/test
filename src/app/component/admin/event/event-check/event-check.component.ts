@@ -29,16 +29,17 @@ export class EventCheckComponent {
 
     this.subscription = this.studentURL.getMessage().subscribe(val => {
       this.res = val;
+    
     });
+    
   }
 
   clickCheck(activities:any) {
-    this.router.navigateByUrl("CheckEventInformationComponent");
+    // this.router.navigateByUrl("CheckEventInformationComponent");
     const formData: FormData = new FormData()
     formData.append('event', activities)
-    console.log(activities)
+
     this.studentURL.onReadrecord(formData).subscribe((res: any) => {
-      console.log(res)
       this.response = res;
       this.studentURL.setMessage(res);
       
@@ -49,5 +50,8 @@ export class EventCheckComponent {
     )
   }
 
+  onBack(){
+    this.router.navigateByUrl("Option");
+  }
 
 }

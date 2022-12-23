@@ -12,7 +12,7 @@
 <br><br>
 <div class="container " style="background-color: #beaaaaad;">
 
-
+{{val}}
 
    <table style="width:30% ;position: relative;transform: translate(130%, 10%);" *ngFor="let post of posts">
         <div *ngIf="post.id==res">
@@ -84,7 +84,8 @@
         </tr>
     </table>
 </div>
-    
+    <button class="btn" (click)="  onSendStart(start)">開始點名</button>
+    <button class="btn1" (click)="  onSendEnd(end)">結束點名</button>
 </div>
 </body>
 </html>

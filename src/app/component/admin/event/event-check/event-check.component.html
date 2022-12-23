@@ -1,6 +1,8 @@
+<body class="body">
 <div class="list-group container">
     <div class="card-header">
         以下是您以申請的活動，按取查詢
+        <button class="btn1" (click)="onBack()">返回</button>
     </div>
     <ul *ngFor="let activity of res;let i = index "class="list-group"  >
         <li class="list-group-item list-group-item-action" >
@@ -15,12 +17,12 @@
                 <div class="text-dark col-12">聯絡人 : <b>{{activity.coordinator}}</b></div>
                 <div class="text-dark col-12">計劃人數 : <b>{{activity.num_ppl}}</b></div>
                 <div class="text-dark col-12">報名人數 : <b>{{activity.Rnumber}}</b></div>
-                <button class="btn" (click)="clickCheck(activity.id)">查詢</button>
+                <button [routerLink]="['/CheckEventInformationComponent']" targer="_blank" class="btn" (click)="clickCheck(activity.id)">查詢</button>
             </div>
 
         </li>
 
     </ul>
-    
- {{res}}
 </div>
+
+</body>

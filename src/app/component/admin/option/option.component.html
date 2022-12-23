@@ -5,8 +5,8 @@
         <div class="dropdown ">
             <button class="dropbtn">會議室</button>
             <div class="dropdown-content">
-                <a on-click='clickMRegister()'>會議室使用申請</a>
-                <a on-click='clickCheck()'>會議使用申請查詢</a>
+                <a on-click='clickMRegister("會議室申請")'>會議室使用申請</a>
+                <a on-click='clickCheck("會議室查詢")'>會議使用申請查詢</a>
             </div>
         </div>
     </div>
@@ -15,15 +15,17 @@
         <div class="dropdown col-mr-5">
             <button class="dropbtn">創辦活動</button>
             <div class="dropdown-content">
-                <a on-click="clickEventRegister()">活動申請</a>
+                <a on-click="clickEventRegister('EventRegisterComponent')">活動申請</a>
                 <a (click)="clickEventCheck()">活動申請查詢</a>
 
             </div>
         </div>
     </div>
 
-    <button type="button" class="btn btn1" on-click="clickBtn()">簽到</button>
+    <button type="button" class="btn btn1" (click)="clickBtn()">簽到</button>
+
+    
 
 </div>
-
+<button type="button" class="btn btn2" (click)="logout()">登出</button>
 </html>

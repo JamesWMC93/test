@@ -1,0 +1,43 @@
+.card-header{
+    text-align: center;
+    background-color: aquamarine;
+    padding: 16px;
+    margin: 10px 0;
+    
+}
+.container{
+    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.178) 5px 5px;
+    font-family: DFKai-sb;
+    font-size:large;
+}
+
+body{
+     margin:0px;
+    height:100vh;
+    width:100%;
+    background:url('image/white.jpg')no-repeat center center fixed; 
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+}
+
+.btn {
+    font-family: DFKai-sb;
+    background-color:rgb(31, 29, 151);
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    border:1px;
+    width: 15%;
+    text-align: center;
+    position: relative;
+    left: 80%;
+  }

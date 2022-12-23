@@ -64,6 +64,8 @@ export class LoginComponent {
       id: new FormControl(null, Validators.required),
       pwd: new FormControl(null, Validators.required),
     });
+
+    
   }
 
 

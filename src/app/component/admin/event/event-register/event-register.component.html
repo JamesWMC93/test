@@ -37,7 +37,7 @@
                 <div class="col-12 col-md-5 col-xl-4 mt-2 mb-4">
                     <label for="place" >場地：</label>
                     <select name="place" class="form-control" name="place" formControlName="place" >
-                        <option *ngFor="let mroom of MRoom" [value]=mroom.id>{{mroom.name}} </option>                       
+                        <option *ngFor="let mroom of MRoom" [value]=mroom.id>{{mroom.id}}-{{mroom.name}} </option>                       
                     </select>
                     
                 </div>

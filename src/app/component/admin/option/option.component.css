@@ -24,6 +24,21 @@ html{
     background-color: #3e8e41;
   }
 
+  .btn2 {
+    margin-left: 10px;
+    bottom: -70%;
+    border:2px rgb(0, 0, 0) solid;
+    background-color:rgb(150, 1, 1);
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 12px;
+    font-family: DFKai-sb;
+  }
+
+  .btn2:hover {
+    background-color: #f30000;
+  }
 
 .dropbtn {
     background-color:lightslategray;

@@ -21,8 +21,8 @@
                 <label for="Mname" style="color :rgb(2, 2, 2);font-size: x-large;" >選擇活動</label>
                 <br />
                 <select [(ngModel)]="lallalal" class="lb">
-                    <option *ngFor="let name of posts ;let i = index" [value]="name.id" >
-                        {{name.Mname}}
+                    <option *ngFor="let name of res ;let i = index" [value]="name.id" >
+                        {{name.name}}
                     </option> 
                 </select>
                 
