@@ -24,28 +24,28 @@ export class StudentService {
   }
 
   onMeetingRoom(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_place.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_read_place.php', formData)
   }
 
   onLogin(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_login.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_login.php', formData)
   }
 
   onReadrecord(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_record.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_read_record.php', formData)
   }
 
 
   onCheckEvent(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_event.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_read_event.php', formData)
   }
 
   onCheckEvent2(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_read_event2.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_read_event2.php', formData)
   }
 
   onRegisterEvent(formData: FormData): Observable<any> {
-    return this.http.post<any>('http://192.168.191.226/face/roll-call/db_event.php', formData)
+    return this.http.post<any>('http://192.168.186.226/face/roll-call/db_event.php', formData)
   }
   
   onSendService(formData:FormData):Observable<any>{
@@ -58,11 +58,11 @@ export class StudentService {
 
   onStartCamera(formData: FormData): Observable<any> {
     
-    return this.http.post<any>('http://192.168.191.137/demo/open_analysis.php', formData)
+    return this.http.post<any>('http://192.168.186.137/demo/open_analysis.php', formData)
   }
 
   onCloseCamera(formData: FormData): Observable<any> {
-    return this.http.post<any>('https://192.168.191.137/demo/close_analysis.php', formData)
+    return this.http.post<any>('https://192.168.186.137/demo/close_analysis.php', formData)
   }
   
 
